@@ -1,0 +1,32 @@
+.ui-kit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px;
+  font-size: 16px; }
+  .ui-kit > * {
+    margin: 10px; }
+  .ui-kit .block {
+    padding: 10px;
+    width: auto;
+    display: inline-flex; }
+    .ui-kit .block > * {
+      margin: 10px; }
+
+svg rect {
+  transition: 1s; }
+svg circle {
+  transition: 1s; }
+svg:hover circle + circle {
+  stroke-dashoffset: 0; }
+svg:hover rect {
+  y: 50%; }
+svg:hover .column__red-column {
+  y: 40%; }
+svg:hover .column__yellow-column {
+  y: 70%; }
+svg:hover .column__green-column {
+  y: 20%; }
+
+/*# sourceMappingURL=uiKit-style.css.map */

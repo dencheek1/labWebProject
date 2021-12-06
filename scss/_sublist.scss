@@ -1,0 +1,47 @@
+@import 'colors';
+
+.list{
+
+    .list__item{
+
+        input{
+            display:none;
+        }
+
+        input + label{
+            display:block;
+            color:$dark_gray;
+            height:52px;
+            width:100%;
+            line-height: 52px;
+            border-bottom:4px solid $grey;
+
+        }
+
+        .list__sublist{
+
+            margin-left: 18px;
+            position:absolute;
+            visibility: hidden;
+            opacity: 0;
+
+        }
+
+        input:checked ~ {
+            .list__sublist{
+                transform:translateY(0);
+                max-height: unset;
+                opacity: 1;
+                visibility: visible;
+                position:relative;
+
+            }
+
+            label{
+                color:$dark_color;
+                border-bottom: none;
+            }
+        }
+    }
+
+}

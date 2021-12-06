@@ -1,0 +1,58 @@
+.ui-kit{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px;
+    font-size: 16px;
+
+    & > *{
+        margin:10px;
+    }
+
+    .block{
+        padding: 10px;
+        width: auto;
+        display:inline-flex;
+        & > *{
+            margin:10px;
+        }
+    }
+}
+
+
+svg{
+
+    rect{
+        transition:1s;
+
+    }
+
+    circle{
+        transition:1s;
+    }
+
+    &:hover{
+
+        circle + circle{
+            stroke-dashoffset:0;
+        }
+
+        rect {
+            y:50%;
+        }
+
+        .column__red-column{
+            y:40%;
+        }
+
+        .column__yellow-column{
+            y:70%;
+        }
+
+        .column__green-column{
+            y:20%;
+        }
+    }
+}
+

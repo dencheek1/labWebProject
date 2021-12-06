@@ -1,0 +1,79 @@
+@import 'colors';
+
+.date{
+   
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    &__day-of-week{
+        width: 100%;
+        height:23%;
+        display: block;
+        line-height:1;
+        background: $main_color;
+        color:$background_color;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__month-date{
+        color:$dark_color;
+        height: 77%;
+        display:block;
+        line-height: 1;
+        text-align: center;
+    }
+
+    &_size_small{
+        width:61px;
+        height: 61px;
+        box-shadow: 0 0 5px $dark_color;
+        border-radius: 14px;
+        
+        .date__day-of-week{
+            height: 18px;
+            border-radius: 0 0 14px 14px;
+            font-size: 80%;
+        }
+    
+        .date__month-date{
+            font-size: 43px;
+        }
+    }
+
+    &_size_normal{
+        width:92px;
+        height: 92px;
+        box-shadow: 0 0 5px $dark_color;
+        border-radius: 21px;
+        
+        .date__day-of-week{
+            border-radius: 0 0 15px 15px;
+            font-size: 1.25em;
+        }
+    
+        .date__month-date{
+            font-size: 73px;
+        }
+    }
+
+    &_size_larg{
+        width:148px;
+        height: 148px;
+        box-shadow: 0 0 5px $dark_color;
+        border-radius: 32px;
+        
+        .date__day-of-week{
+            border-radius: 0 0 32px 32px;
+            font-size: 32px;
+        }
+    
+        .date__month-date{
+            font-size: 118px;
+        }
+    }
+
+}
