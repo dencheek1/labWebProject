@@ -300,63 +300,83 @@ input:checked + .toggle-button__label {
 
 .list .list__item input {
   display: none; }
-.list .list__item input + label {
+.list .list__item .list__input + .list__input-label {
   display: block;
-  color: #808080;
+  color: #c1c1c1;
   height: 52px;
   width: 100%;
   line-height: 52px;
   border-bottom: 4px solid #c1c1c1;
   display: inline-flex; }
-  .list .list__item input + label .icon {
+  .list .list__item .list__input + .list__input-label .icon {
     display: inline-block;
     width: 32px;
     height: 32px;
     margin: 10px 12px;
     background: #ffffffff;
-    transition: 0.2s; }
-    .list .list__item input + label .icon:hover::before {
-      transform: rotateZ(-45deg); }
-    .list .list__item input + label .icon:hover::after {
-      transform: rotateZ(45deg); }
-    .list .list__item input + label .icon::before, .list .list__item input + label .icon::after {
-      transition: 0.4s;
-      content: "";
-      display: block;
-      position: relative;
-      width: 18px;
-      height: 4px;
-      border-radius: 3px;
-      background: #c1c1c1;
-      transform-origin: center; }
-    .list .list__item input + label .icon::before {
-      left: 12px;
-      top: 13px;
-      transform: rotateZ(-45deg); }
-    .list .list__item input + label .icon::after {
-      left: 2px;
-      top: 9px;
-      transform: rotateZ(45deg); }
+    transition: 0.4s;
+                /*
+                &:hover{
+                
+                    .icon__{
+                        &top{
+                            stroke:$main_color;
+                            stroke-dashoffset:84;
+                        }
+                        &bottom{
+                            stroke-dashoffset:42;
+                        }
+                    }
+                }
+
+                &::before, &::after {
+                    transition:0.4s;
+                    content:"";
+                    display:block;
+                    position: relative;
+                    width:18px;
+                    height:4px;
+                    border-radius: 3px;
+                    background: $grey;
+                    transform-origin: center;
+                }
+                &::before {
+                    left: 12px;
+                    top:13px;
+                    transform: rotateZ(-45deg);
+                }
+                &::after {
+                    left:2px;
+                    top:9px;
+                    transform: rotateZ(45deg);
+                }
+                */ }
+    .list .list__item .list__input + .list__input-label .icon__top {
+      transition: inherit;
+      stroke: #424242;
+      stroke-dashoffset: 42; }
+    .list .list__item .list__input + .list__input-label .icon__bottom {
+      transition: inherit;
+      stroke: #c1c1c1;
+      stroke-dashoffset: 0; }
 .list .list__item .list__sublist {
   margin-left: 18px;
   position: absolute;
   visibility: hidden;
   opacity: 0; }
-.list .list__item input:checked ~ .list__sublist {
+.list .list__item .list__input:checked ~ .list__sublist {
   transform: translateY(0);
   max-height: unset;
   opacity: 1;
   visibility: visible;
   position: relative; }
-.list .list__item input:checked ~ label {
+.list .list__item .list__input:checked ~ .list__input-label {
   color: #424242;
   border-bottom: none; }
-  .list .list__item input:checked ~ label .icon::before {
-    background: #424242;
-    transform: rotateZ(45deg); }
-  .list .list__item input:checked ~ label .icon::after {
-    background: #424242;
-    transform: rotateZ(-45deg); }
+  .list .list__item .list__input:checked ~ .list__input-label .icon__top {
+    stroke-dashoffset: 84; }
+  .list .list__item .list__input:checked ~ .list__input-label .icon__bottom {
+    stroke-dashoffset: 42; }
 
 .food-item {
   width: 340px;
@@ -375,5 +395,35 @@ input:checked + .toggle-button__label {
     background-color: #424242;
     display: block;
     margin-right: 10px; }
+
+svg .icon__top {
+  transition: 0.3s ease-in-out;
+  stroke-dashoffset: 84; }
+svg .icon__bottom {
+  transition: 0.3s ease-in-out;
+  stroke-dashoffset: 42; }
+svg:hover .icon__top {
+  stroke-dashoffset: 42; }
+svg:hover .icon__bottom {
+  stroke-dashoffset: 0;
+  stroke: #f14150; }
+
+.logo {
+  position: static;
+  width: 634px;
+  height: 128px;
+  background-color: #f14150;
+  display: inline-flex;
+  align-items: center;
+  line-height: 128px;
+  border-bottom-right-radius: 35px; }
+  .logo .logo__icon {
+    position: relative;
+    margin-left: 86px; }
+  .logo .logo__header {
+    color: #fcfcfc;
+    font-size: 46px;
+    position: relative;
+    margin-left: 48px; }
 
 /*# sourceMappingURL=style.css.map */
