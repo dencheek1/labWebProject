@@ -306,7 +306,37 @@ input:checked + .toggle-button__label {
   height: 52px;
   width: 100%;
   line-height: 52px;
-  border-bottom: 4px solid #c1c1c1; }
+  border-bottom: 4px solid #c1c1c1;
+  display: inline-flex; }
+  .list .list__item input + label .icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 10px 12px;
+    background: #ffffffff;
+    transition: 0.2s; }
+    .list .list__item input + label .icon:hover::before {
+      transform: rotateZ(-45deg); }
+    .list .list__item input + label .icon:hover::after {
+      transform: rotateZ(45deg); }
+    .list .list__item input + label .icon::before, .list .list__item input + label .icon::after {
+      transition: 0.4s;
+      content: "";
+      display: block;
+      position: relative;
+      width: 18px;
+      height: 4px;
+      border-radius: 3px;
+      background: #c1c1c1;
+      transform-origin: center; }
+    .list .list__item input + label .icon::before {
+      left: 12px;
+      top: 13px;
+      transform: rotateZ(-45deg); }
+    .list .list__item input + label .icon::after {
+      left: 2px;
+      top: 9px;
+      transform: rotateZ(45deg); }
 .list .list__item .list__sublist {
   margin-left: 18px;
   position: absolute;
@@ -321,6 +351,12 @@ input:checked + .toggle-button__label {
 .list .list__item input:checked ~ label {
   color: #424242;
   border-bottom: none; }
+  .list .list__item input:checked ~ label .icon::before {
+    background: #424242;
+    transform: rotateZ(45deg); }
+  .list .list__item input:checked ~ label .icon::after {
+    background: #424242;
+    transform: rotateZ(-45deg); }
 
 .food-item {
   width: 340px;

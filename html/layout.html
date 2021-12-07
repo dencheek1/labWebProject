@@ -162,7 +162,7 @@
           <li class="list__item">
             <input class="list" type="checkbox" name="category" id="category-1">
             <label for="category-1">
-              <h4>Category</h4>
+              <div class="icon"></div><h4>Category</h4>
             </label>
             <ul class="list__sublist">
               <li class="list__subitem">
@@ -181,7 +181,7 @@
           <li class="list__item">
             <input class="list" type="checkbox" name="category" id="category-2">
             <label for="category-2">
-              <h4>Category</h4>
+              <div class="icon"></div><h4>Category</h4>
             </label>
             <ul class="list__sublist">
               <li class="list__subitem">
@@ -222,7 +222,7 @@
           <li class="list__item">
             <input class="list" type="checkbox" name="category" id="category-3">
             <label for="category-3">
-              <h4>Category</h4>
+              <div class="icon"></div><h4>Category</h4>
             </label>
             <ul class="list__sublist">
               <li class="list__subitem">
@@ -406,7 +406,7 @@
           <li class="list__item">
             <input class="list" type="checkbox" name="category" id="category-4">
             <label for="category-4">
-              <h4>Category</h4>
+              <div class="icon"></div><h4>Category</h4>
             </label>
             <ul class="list__sublist">
               <li class="list__subitem">
@@ -537,7 +537,40 @@
 
     <div class="block">
       <svg width = "548px" height = "330px">
-        <path d="M 0 280 L 20 280 H 50 L 70 120 H 100 " fill="none" stroke="#808080" stroke-linejoin="round" stroke-width="8px" />
+        <path id="p1"
+          d= "M 0 100 H 51 L 102 200 
+              H 119 H 136 L 187 300
+              H 204 H 221 L 272 150
+              H 289 H 306 L 357 250
+              H 374 H 391 L 442 310
+              H 459 H 476 L 527 190
+              H 544 H 548 
+              " 
+        fill="none" stroke="#808080" stroke-linejoin="round" stroke-width="8px" >
+      <animate dur="4s" values="10; 20" keyTimes="0; 1"
+     calcMode="spline" keySplines={as in table} />
+        
+     <animate xlink:href="#p1"
+     attributeName="d"
+     attributeType="XML"
+     from="M 0 300 H 51 L 102 300 
+     H 119 H 136 L 187 300
+     H 204 H 221 L 272 300
+     H 289 H 306 L 357 300
+     H 374 H 391 L 442 300
+     H 459 H 476 L 527 300
+     H 544 H 548 "
+         to="M 0 100 H 51 L 102 200 
+         H 119 H 136 L 187 300
+         H 204 H 221 L 272 150
+         H 289 H 306 L 357 250
+         H 374 H 391 L 442 310
+         H 459 H 476 L 527 190
+         H 544 H 548 
+         "
+     dur="3s"
+     repeatCount="indefinite" />
+    </path>
       </svg>
     </div>
 

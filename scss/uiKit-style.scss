@@ -23,6 +23,10 @@
 
 svg{
 
+    path{
+        transition:5s;
+    }
+
     rect{
         transition:1s;
 
@@ -39,19 +43,23 @@ svg{
         }
 
         rect {
-            y:50%;
+            transform:translateY(50%);
+            fill:#f14150;
         }
 
         .column__red-column{
-            y:40%;
+            transform:translateY(40%);
+            //y:40%;
         }
 
         .column__yellow-column{
-            y:70%;
+            transform:translateY(70%);
+            //y:70%;
         }
 
         .column__green-column{
-            y:20%;
+            transform:translateY(20%);
+            //y:20%;
         }
     }
 }

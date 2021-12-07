@@ -14,6 +14,8 @@
     .ui-kit .block > * {
       margin: 10px; }
 
+svg path {
+  transition: 5s; }
 svg rect {
   transition: 1s; }
 svg circle {
@@ -21,12 +23,13 @@ svg circle {
 svg:hover circle + circle {
   stroke-dashoffset: 0; }
 svg:hover rect {
-  y: 50%; }
+  transform: translateY(50%);
+  fill: #f14150; }
 svg:hover .column__red-column {
-  y: 40%; }
+  transform: translateY(40%); }
 svg:hover .column__yellow-column {
-  y: 70%; }
+  transform: translateY(70%); }
 svg:hover .column__green-column {
-  y: 20%; }
+  transform: translateY(20%); }
 
 /*# sourceMappingURL=uiKit-style.css.map */
