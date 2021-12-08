@@ -402,7 +402,7 @@ input:checked + .toggle-button__label {
 
 .logo {
   position: static;
-  width: 634px;
+  width: 874px;
   height: 128px;
   background-color: #f14150;
   display: inline-flex;
@@ -414,7 +414,7 @@ input:checked + .toggle-button__label {
     margin-left: 86px; }
   .logo .logo__header {
     color: #fcfcfc;
-    font-size: 46px;
+    font-size: 64px;
     position: relative;
     margin-left: 48px; }
 
