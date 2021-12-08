@@ -11,7 +11,7 @@
     }
 
     .block{
-        padding: 10px;
+        padding: 12px;
         width: auto;
         display:inline-flex;
         & > *{
@@ -64,3 +64,30 @@ svg{
     }
 }
 
+svg{
+
+
+    .icon__{
+        &top{
+            transition:0.3s ease-in-out;
+            stroke-dashoffset:84;
+        }
+        &bottom{
+            transition:0.3s ease-in-out;
+            stroke-dashoffset:42;
+        }
+    }
+
+    &:hover{
+    
+        .icon__{
+            &top{
+                stroke-dashoffset:42;
+            }
+            &bottom{
+                stroke-dashoffset:0;
+                stroke:#f14150;
+            }
+        }
+    }
+}

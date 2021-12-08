@@ -6,13 +6,14 @@ $bt : ".button_type_";
 
 .button{
    
+    display:block;
     background-color: $main_color;
     transition: box-shadow 0.2s;
 
 
     font-weight: bold;
     text-align: center;
-    vertical-align: middle;
+    text-decoration: none;
     color: $background_color;
     box-shadow: 0px 0px 10px $main_color_shadow, 0 0 10px #ffffff00 inset;  
     

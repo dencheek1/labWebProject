@@ -1,0 +1,63 @@
+@import 'colors';
+
+.header{
+    width:100%;
+    //background: #888;
+    height:128px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .header__navigation{
+        
+        margin-left: 240px;
+        .header__links{
+            margin-right:80px;
+            display:flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            .button{
+                margin-left:12px;
+            }
+        }        
+    }
+
+    @media screen and (min-width: 1440px) {
+     
+        .header__navigation{
+        
+            margin-left:412px;
+            .header__links{
+                margin-right:80px;
+                display:flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                .button{
+                    margin-left:12px;
+                }
+            }        
+        }
+
+    }
+
+}
+
+.information{
+    margin-top:118px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    .infromtation__blocks{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+        .block{
+            height:468px;
+            width:468px;
+            margin:46px;
+        }
+    }
+}

@@ -50,12 +50,16 @@ img {
   max-width: 100%;
   display: block; }
 
+a {
+  outline: none; }
+
 .button {
+  display: block;
   background-color: #f14150;
   transition: box-shadow 0.2s;
   font-weight: bold;
   text-align: center;
-  vertical-align: middle;
+  text-decoration: none;
   color: #fcfcfc;
   box-shadow: 0px 0px 10px #5f1419, 0 0 10px #ffffff00 inset; }
   .button:hover {
@@ -395,18 +399,6 @@ input:checked + .toggle-button__label {
     background-color: #424242;
     display: block;
     margin-right: 10px; }
-
-svg .icon__top {
-  transition: 0.3s ease-in-out;
-  stroke-dashoffset: 84; }
-svg .icon__bottom {
-  transition: 0.3s ease-in-out;
-  stroke-dashoffset: 42; }
-svg:hover .icon__top {
-  stroke-dashoffset: 42; }
-svg:hover .icon__bottom {
-  stroke-dashoffset: 0;
-  stroke: #f14150; }
 
 .logo {
   position: static;

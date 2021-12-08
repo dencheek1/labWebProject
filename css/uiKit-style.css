@@ -8,7 +8,7 @@
   .ui-kit > * {
     margin: 10px; }
   .ui-kit .block {
-    padding: 10px;
+    padding: 12px;
     width: auto;
     display: inline-flex; }
     .ui-kit .block > * {
@@ -31,5 +31,17 @@ svg:hover .column__yellow-column {
   transform: translateY(70%); }
 svg:hover .column__green-column {
   transform: translateY(20%); }
+
+svg .icon__top {
+  transition: 0.3s ease-in-out;
+  stroke-dashoffset: 84; }
+svg .icon__bottom {
+  transition: 0.3s ease-in-out;
+  stroke-dashoffset: 42; }
+svg:hover .icon__top {
+  stroke-dashoffset: 42; }
+svg:hover .icon__bottom {
+  stroke-dashoffset: 0;
+  stroke: #f14150; }
 
 /*# sourceMappingURL=uiKit-style.css.map */
