@@ -426,4 +426,8 @@ svg:hover .icon__bottom {
     position: relative;
     margin-left: 48px; }
 
+.heading {
+  color: #424242;
+  font-family: Arial, Helvetica, sans-serif; }
+
 /*# sourceMappingURL=style.css.map */
