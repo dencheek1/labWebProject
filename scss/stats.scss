@@ -1,0 +1,32 @@
+.header{
+    min-width:1600px;
+    height:128px;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .header__logo{
+        .logo{
+            width:634px;
+        }
+    }
+
+    .header__navigation{
+        width:100%;
+        display:flex;
+        justify-content: center;
+        .header__links{
+           
+            align-self: center;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-left: 92px;
+            .button{
+                margin-right: 12px;
+            }
+
+        }        
+    }
+}

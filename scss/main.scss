@@ -11,11 +11,11 @@
 
     .header__navigation{
         width:100%;
-        align-self: center;
         display:flex;
         justify-content: center;
         .header__links{
            
+            align-self: center;
             display:flex;
             flex-direction: row-reverse;
             justify-content: center;
@@ -47,6 +47,19 @@
     
             }        
         }
+    }
+
+    @media screen and  (max-width:1280px) {
+        
+        .header__logo{
+            .logo{
+                width:474px;
+                &__icon{
+                    margin-left:46px;
+                }
+            }
+        }
+        
     }
 
 }

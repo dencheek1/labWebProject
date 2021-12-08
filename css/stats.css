@@ -1,0 +1,22 @@
+.header {
+  min-width: 1600px;
+  height: 128px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+  .header .header__logo .logo {
+    width: 634px; }
+  .header .header__navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .header .header__navigation .header__links {
+      align-self: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-left: 92px; }
+      .header .header__navigation .header__links .button {
+        margin-right: 12px; }
+
+/*# sourceMappingURL=stats.css.map */
