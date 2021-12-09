@@ -22,11 +22,43 @@
             display:flex;
             flex-direction: row;
             justify-content: center;
-            padding-left: 92px;
+            margin-left:-52px;
             .button{
                 margin-right: 12px;
             }
 
         }        
+    }
+}
+
+.statistics{
+
+    margin-top:64px;
+    margin-left:12px;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__graph{
+        width:708px;
+        height:560px;
+        margin-bottom:12px;
+
+    }
+
+    &__elements, &__recomendations{
+
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .block{
+            width:468px;
+            height:274px;
+            margin:0 0px 12px 12px;
+        }
     }
 }

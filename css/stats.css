@@ -15,8 +15,30 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      padding-left: 92px; }
+      margin-left: -52px; }
       .header .header__navigation .header__links .button {
         margin-right: 12px; }
+
+.statistics {
+  margin-top: 64px;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .statistics__graph {
+    width: 708px;
+    height: 560px;
+    margin-bottom: 12px; }
+  .statistics__elements, .statistics__recomendations {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+    .statistics__elements .block, .statistics__recomendations .block {
+      width: 468px;
+      height: 274px;
+      margin: 0 0px 12px 12px; }
 
 /*# sourceMappingURL=stats.css.map */
