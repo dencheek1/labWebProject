@@ -46,6 +46,15 @@
     @media screen and (max-width: 1600px) {
       .information .informtation__blocks {
         width: 1108px; } }
+    @media screen and (max-width: 1200px) {
+      .information .informtation__blocks {
+        width: 800px; } }
+    @media screen and (max-width: 992px) {
+      .information .informtation__blocks {
+        width: 800px; } }
+    @media screen and (max-width: 600px) {
+      .information .informtation__blocks {
+        width: 100%; } }
     .information .informtation__blocks .block {
       height: 468px;
       width: 468px;

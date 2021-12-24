@@ -61,4 +61,26 @@
             margin:0 0px 12px 12px;
         }
     }
+    
+    @media screen and(max-width:1600px){
+        .statistics__recomendations{
+            flex-direction: row;
+        }
+    }
+
+    @media screen and(max-width:1200px) {
+        .statistics__elements{
+            flex-direction: row;
+        }
+    }
+
+    &__diogram{
+        margin:24px;
+        
+        .statistics__diogram-text{
+            position: relative;
+            left:0;
+            right: 0;
+        }
+    }
 }

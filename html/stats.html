@@ -23,21 +23,51 @@
         <nav class="header__navigation">
             <div class="header__links">
 
-                <div class="button button_size_2x48px button_type_left">Регистрация</div>
-                <div class="button button_size_2x48px button_type_square">Вход</div>
-                <div class="button button_size_2x48px button_type_square">Вход</div>
-                <div class="button button_size_2x48px button_type_square">Вход</div>
-                <div class="button button_size_2x48px button_type_right">Вход</div>
+                <div class="button button_size_2x48px button_type_left">Главная</div>
+                <div class="button button_size_2x48px button_type_square">Статистика</div>
+                <div class="button button_size_2x48px button_type_square">Дневник</div>
+                <div class="button button_size_2x48px button_type_square">Планы</div>
+                <div class="button button_size_2x48px button_type_right">Профиль</div>
             </div>
         </nav>
     </header>
 
     <div class="statistics">
         <div class="statistics__graph block">
+            <svg width="548px" height="330px">
+                <path id="p1" d="M 0 100 H 51 L 102 200 
+                      H 119 H 136 L 187 300
+                      H 204 H 221 L 272 150
+                      H 289 H 306 L 357 250
+                      H 374 H 391 L 442 310
+                      H 459 H 476 L 527 190
+                      H 544 H 548 
+                      " fill="none" stroke="#808080" stroke-linejoin="round" stroke-width="8px"></svg>
         </div>
         <div class="statistics__elements">
-            <div class="statistics__bfc block">BFC</div>
-            <div class="statistics__micro block">MICRO</div>
+            <div class="statistics__bfc block">
+                <h2>Доля БЖУ в питании</h2>
+                <div class="statistics__diogram">
+                    <svg width="160px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f14150" stroke-width="10"
+                                stroke-dasharray="440" stroke-dashoffset="0" />
+                            <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f5f557" stroke-width="14"
+                                stroke-dasharray="440" stroke-dashoffset="220" />
+                            <circle cx="50%" cy="50%" r="70" fill="none" stroke="#68d97b" stroke-width="18"
+                                stroke-dasharray="440" stroke-dashoffset="400" />
+                        </g>
+                    </svg>
+                    <div class="statistics__diogram-text">
+                        <h4>всего</h4>
+                        <h3>333g</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="statistics__micro block">
+                <h2>Макроэлементы</h2>
+                
+            </div>
         </div>
         <div class="statistics__recomendations">
             <div class="statistics__recomendation block">recomendation</div>

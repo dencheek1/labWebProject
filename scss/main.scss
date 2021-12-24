@@ -77,6 +77,17 @@
             width: 1108px;
         }
 
+        @media screen and(max-width:1200px){
+            width: 800px;
+        }
+        @media screen and(max-width:992px){
+            width: 800px;
+        }
+
+        @media screen and(max-width:600px){
+            width: 100%;
+        }
+
         margin:96px 0 32px 0;
         width:1640px;
         display:flex;
