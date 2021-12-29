@@ -21,7 +21,6 @@
 
 .statistics {
   margin-top: 64px;
-  margin-left: 12px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -30,27 +29,84 @@
   .statistics__graph {
     width: 708px;
     height: 560px;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .statistics__graph-dates {
+      width: 548px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
   .statistics__elements, .statistics__recomendations {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start; }
+    align-items: center; }
     .statistics__elements .block, .statistics__recomendations .block {
       width: 468px;
       height: 274px;
       margin: 0 0px 12px 12px; }
+  .statistics__header {
+    margin: 12px 0px 18px 80px; }
   @media screen and (max-width: 1600px) {
     .statistics .statistics__recomendations {
       flex-direction: row; } }
   @media screen and (max-width: 1200px) {
     .statistics .statistics__elements {
       flex-direction: row; } }
-  .statistics__diogram {
-    margin: 24px; }
-    .statistics__diogram .statistics__diogram-text {
-      position: relative;
-      left: 0;
-      right: 0; }
+  .statistics__bfc .statistics__diogram {
+    margin: 12px 12px 12px 12px;
+    position: relative;
+    line-height: 1; }
+    .statistics__bfc .statistics__diogram-text {
+      position: absolute;
+      left: 57px;
+      top: 62px; }
+      .statistics__bfc .statistics__diogram-text h3:last-child {
+        color: #68d97b;
+        font-weight: bold; }
+  .statistics__flex-wraper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center; }
+  .statistics__bfc-data-table {
+    table-layout: auto;
+    width: 100%; }
+  .statistics__bfc-data-cell {
+    margin: 0 24px;
+    height: 50px;
+    font-weight: bold;
+    color: #424242;
+    font-size: 1em;
+    text-align: left; }
+
+.additional-data {
+  margin: 68px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .additional-data__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 548px;
+    margin: 6px; }
+    .additional-data__block .additional-data__header {
+      display: flex;
+      justify-content: space-between;
+      margin: 24px;
+      width: 412px; }
+      .additional-data__block .additional-data__header-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 148px; }
+  .additional-data__table {
+    margin: 24px;
+    width: 412px; }
+  .additional-data .button {
+    margin-bottom: 24px; }
 
 /*# sourceMappingURL=stats.css.map */

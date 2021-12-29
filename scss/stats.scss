@@ -1,3 +1,5 @@
+@import "colors";
+
 .header{
     min-width:1600px;
     height:128px;
@@ -34,7 +36,6 @@
 .statistics{
 
     margin-top:64px;
-    margin-left:12px;
     display:flex;
     flex-direction: row;
     align-items: flex-start;
@@ -45,6 +46,16 @@
         width:708px;
         height:560px;
         margin-bottom:12px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-dates{
+            width:548px;
+            display:flex;
+            flex-direction: row;;
+            justify-content: space-between;
+        }
 
     }
 
@@ -53,7 +64,8 @@
         display:flex;
         flex-direction: column;
         flex-wrap: wrap;
-        align-items: flex-start;
+        align-items: center;
+
 
         .block{
             width:468px;
@@ -62,6 +74,10 @@
         }
     }
     
+    &__header{
+        margin:12px 0px 18px 80px;
+    }
+
     @media screen and(max-width:1600px){
         .statistics__recomendations{
             flex-direction: row;
@@ -74,13 +90,86 @@
         }
     }
 
-    &__diogram{
-        margin:24px;
-        
-        .statistics__diogram-text{
+    &__bfc{
+        .statistics__diogram{
+            margin:12px 12px 12px 12px;
             position: relative;
-            left:0;
-            right: 0;
+            line-height: 1;
+    
+            &-text{
+                position: absolute;
+                left:57px;
+                top: 62px;
+                h3:last-child{
+                    color:$additional_color;
+                    font-weight: bold;
+                }
+            }
         }
+
+    }
+
+    &__flex-wraper{
+        display: flex;
+        flex-direction:row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__bfc-data{
+        &-table{
+            table-layout: auto;
+            width:100%;
+        }
+
+        &-row{
+
+        }
+
+        &-cell{
+            margin: 0 24px;
+            height:50px;
+            font-weight:bold;
+            color: $dark_color;
+            font-size:  1em;
+            text-align: left;
+        }
+    }
+
+}
+
+.additional-data{
+    margin:68px 0;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__block{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:548px;
+        margin:6px;
+        
+        .additional-data__header{
+        display:flex;
+        justify-content: space-between;
+        margin:24px;
+        width:412px;
+            &-nav{
+                display:flex;
+                justify-content: space-between;
+                width:148px
+            }
+        }
+    }
+    &__table{
+        margin:24px;
+        width:412px;
+    }
+
+    .button{
+        margin-bottom:24px;
     }
 }
