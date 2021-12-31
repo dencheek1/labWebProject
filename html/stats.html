@@ -34,45 +34,53 @@
 
     <div class="statistics">
         <div class="statistics__graph block">
+            <div class="slider week-select">
+
+                <div class="slider__prev"><img src="../img/left.png" alt=""></div>
+                <h2 class="slider__text">Номер недели</h2>
+                <div class="slider__next"><img src="../img/right.png" alt=""></div>
+
+            </div>
             <svg width="548px" height="330px">
-                <path id="p1" d="M 0 100 H 51 L 102 200 
-                      H 119 H 136 L 187 300
-                      H 204 H 221 L 272 150
-                      H 289 H 306 L 357 250
-                      H 374 H 391 L 442 310
-                      H 459 H 476 L 527 190
-                      H 544 H 548 
+                <path id="p1" d="
+                    M 0 100 H 51 L 96 200 
+                    H 125 L 180 300
+                    H 205 L 265 150
+                    H 290 L 345 250
+                    H 370 L 425 310
+                    H 450 L 500 190
+                    H 548 
                       " fill="none" stroke="#808080" stroke-linejoin="round" stroke-width="8px">
             </svg>
             <div class="statistics__graph-dates">
                 <div class="date date_size_small">
                     <span class="date__month-date">20</span>
                     <span class="date__day-of-week">Monday</span>
-                  </div>
-                  <div class="date date_size_small">
+                </div>
+                <div class="date date_size_small">
                     <span class="date__month-date">20</span>
                     <span class="date__day-of-week">Monday</span>
-                  </div>
-                  <div class="date date_size_small">
+                </div>
+                <div class="date date_size_small">
                     <span class="date__month-date">20</span>
                     <span class="date__day-of-week">Monday</span>
-                  </div>
-                  <div class="date date_size_small">
+                </div>
+                <div class="date date_size_small">
                     <span class="date__month-date">20</span>
                     <span class="date__day-of-week">Monday</span>
-                  </div>
-                  <div class="date date_size_small">
+                </div>
+                <div class="date date_size_small">
                     <span class="date__month-date">20</span>
                     <span class="date__day-of-week">Monday</span>
-                  </div>
-                  <div class="date date_size_small">
+                </div>
+                <div class="date date_size_small">
                     <span class="date__month-date">20</span>
                     <span class="date__day-of-week">Monday</span>
-                  </div>
-                  <div class="date date_size_small">
+                </div>
+                <div class="date date_size_small">
                     <span class="date__month-date">20</span>
                     <span class="date__day-of-week">Monday</span>
-                  </div>
+                </div>
             </div>
         </div>
         <div class="statistics__elements">
@@ -98,20 +106,20 @@
                     <div class="statistics__bfc-text">
                         <table class="statistics__bfc-data-table">
                             <tr class="statistics__bfc-data-row">
-                                <th class="statistics__bfc-data-cell">Белки</th>
                                 <td class="statistics__bfc-data-cell">A</td>
+                                <th class="statistics__bfc-data-cell">Белки</th>
                                 <td class="statistics__bfc-data-cell">B</td>
                                 <td class="statistics__bfc-data-cell">X</td>
                             </tr>
                             <tr class="statistics__bfc-data-row">
+                                <td class="statistics__bfc-data-cell ">A</td>
                                 <th class="statistics__bfc-data-cell">Жиры</th>
-                                <td class="statistics__bfc-data-cell">A</td>
                                 <td class="statistics__bfc-data-cell">B</td>
                                 <td class="statistics__bfc-data-cell">Y</td>
                             </tr>
                             <tr class="statistics__bfc-data-row">
+                                <td class="statistics__bfc-data-cell ">A</td>
                                 <th class="statistics__bfc-data-cell">Углеводы</th>
-                                <td class="statistics__bfc-data-cell">A</td>
                                 <td class="statistics__bfc-data-cell">B</td>
                                 <td class="statistics__bfc-data-cell">Y</td>
                             </tr>
@@ -122,12 +130,54 @@
             </div>
             <div class="statistics__micro block">
                 <h2>Макроэлементы</h2>
-
+                <div class="statistics__micro-diogram">
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >калории <br> <span class="statistics__micro-diogram-data">200</span> </span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >вода<br> <span class="statistics__micro-diogram-data">200</span></span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >белки <br><span class="statistics__micro-diogram-data">200</span> </span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >жиры <br><span class="statistics__micro-diogram-data">200</span> </span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >углеводы <br><span class="statistics__micro-diogram-data">200</span> </span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="statistics__recomendations">
-            <div class="statistics__recomendation block">recomendation</div>
-            <div class="statistics__recomendation block">recomendation</div>
+            <div class="statistics__recomendation block">
+                <h2 class="statistics__recomendation-header">Рекомендации</h2>
+                <p class="statistics__recomendation-text">рекомендую</p>
+            </div>
+            <div class="statistics__recomendation block">
+                <h2 class="statistics__recomendation-header">Рекомендации</h2>
+                <p class="statistics__recomendation-text">рекомендую</p>
+            </div>
         </div>
 
     </div>
@@ -137,52 +187,26 @@
             <div class="additional-data__header">
                 <h2>Завтрак</h2>
                 <div class="additional-data__header-nav">
-                    <img src="" alt="след">
-                    <img src="" alt="пред">
-                </div>
-            </div>
-            <div class="disable"></div>
-            <table class="additional-data__table table">
-                <tr>
-                    <th class="table__data">среднее <br>для</th>
-                    <th class="table__data">ккал</th>
-                    <th class="table__data">белки</th>
-                    <th class="table__data">жиры</th>
-                    <th class="table__data">углев.</th>
-                </tr>
-                <tr>
-                    <td class="table__data">Завтрак</td>
-                    <td class="table__data">data</td>
-                    <td class="table__data">data</td>
-                    <td class="table__data">data</td>
-                    <td class="table__data">data</td>
-                </tr>
-                <tr>
-                    <td class="table__data">Обед</td>
-                    <td class="table__data">data</td>
-                    <td class="table__data">data</td>
-                    <td class="table__data">data</td>
-                    <td class="table__data">data</td>
-                </tr>
-                <tr>
-                    <td class="table__data">Ужин</td>
-                    <td class="table__data">data</td>
-                    <td class="table__data">data</td>
-                    <td class="table__data">data</td>
-                    <td class="table__data">data</td>
-                </tr>
-                <tr>
-                    <td class="table__data">всего</td>
-                </tr>
-            </table>
-            <div class="button button_size_2x48px button_type_round"> подробнее</div>
-        </div>
-        <div class="additional-data__block block">
-            <div class="additional-data__header">
-                <h2>Завтрак</h2>
-                <div class="additional-data__header-nav">
-                    <img src="" alt="след">
-                    <img src="" alt="пред">
+
+                    <div class="icon additional-data__diogram-selector">
+                        <svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="23" width="8" height="40" fill="#808080" />
+                            <rect x="10" y="17" width="8" height="40" fill="#808080" />
+                            <rect x="20" y="7" width="8" height="40" fill="#808080" />
+                            <rect x="30" y="0" width="8" height="40" fill="#808080" />
+                        </svg>
+                    </div>
+                    <div class="icon additional-data__table-selector" selected>
+                        <svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="40" height="8" fill="#808080" />
+                            <rect x="12.66" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="25.33" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="38" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="0" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="0" y="10" width="40" height="2" fill="#808080" />
+                            <rect x="0" y="38" width="40" height="2" fill="#808080" />
+                        </svg>
+                    </div>
                 </div>
             </div>
             <div class="disable"></div>
@@ -226,25 +250,24 @@
                 <h2>Завтрак</h2>
                 <div class="additional-data__header-nav">
 
-                    <div class="icon">
+                    <div class="icon additional-data__diogram-selector">
                         <svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0" y="23" width="8" height="40" fill="#444" />
-                            <rect x="10" y="17" width="8" height="40" fill="#444" />
-                            <rect x="20" y="7" width="8" height="40" fill="#444" />
-                            <rect x="30" y="0" width="8" height="40" fill="#444" />
+                            <rect x="0" y="23" width="8" height="40" fill="#808080" />
+                            <rect x="10" y="17" width="8" height="40" fill="#808080" />
+                            <rect x="20" y="7" width="8" height="40" fill="#808080" />
+                            <rect x="30" y="0" width="8" height="40" fill="#808080" />
                         </svg>
                     </div>
-                    <div class="icon">
+                    <div class="icon additional-data__table-selector" selected>
                         <svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0" y="0" width="40" height="8" fill="#f00" />
-                            <rect x="12.66" y="10" width="2" height="30" fill="#f00" />
-                            <rect x="25.33" y="10" width="2" height="30" fill="#f00" />
-                            <rect x="38" y="10" width="2" height="30" fill="#f00" />
-                            <rect x="0" y="10" width="2" height="30" fill="#f00" />
-                            <rect x="0" y="10" width="40" height="2" fill="#f00" />
-                            <rect x="0" y="38" width="40" height="2" fill="#f00" />
+                            <rect x="0" y="0" width="40" height="8" fill="#808080" />
+                            <rect x="12.66" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="25.33" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="38" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="0" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="0" y="10" width="40" height="2" fill="#808080" />
+                            <rect x="0" y="38" width="40" height="2" fill="#808080" />
                         </svg>
-
                     </div>
                 </div>
             </div>
@@ -284,6 +307,74 @@
             </table>
             <div class="button button_size_2x48px button_type_round"> подробнее</div>
         </div>
+
+        <div class="additional-data__block block">
+            <div class="additional-data__header">
+                <h2>Завтрак</h2>
+                <div class="additional-data__header-nav">
+
+                    <div class="icon additional-data__diogram-selector" selected>
+                        <svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="23" width="8" height="40" fill="#808080" />
+                            <rect x="10" y="17" width="8" height="40" fill="#808080" />
+                            <rect x="20" y="7" width="8" height="40" fill="#808080" />
+                            <rect x="30" y="0" width="8" height="40" fill="#808080" />
+                        </svg>
+                    </div>
+                    <div class="icon additional-data__table-selector" >
+                        <svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="40" height="8" fill="#808080" />
+                            <rect x="12.66" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="25.33" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="38" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="0" y="10" width="2" height="30" fill="#808080" />
+                            <rect x="0" y="10" width="40" height="2" fill="#808080" />
+                            <rect x="0" y="38" width="40" height="2" fill="#808080" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="disable"></div>
+            <div class="additional-data__diogram-wraper">
+                <div class="additional-data__diogram-selector">
+                    <ul class="select-list">
+                        <li class="select-list__item">
+                          <input type="radio" name="select-item" id="select-item-favorites">
+                          <label class="select-list__label" for="select-item-favorites">ккал</label>
+                        </li>
+                        <li class="select-list__item">
+                          <input type="radio" name="select-item" id="select-item-category">
+                          <label class="select-list__label" for="select-item-category">бжу</label>
+                        </li>
+                      </ul>
+                </div>
+                <div class="additional-data__diogram">
+                    <div class="additional-data__diogram-element">
+                        <svg width="48px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="100%" height="100%" fill="#68d97b" />
+                          </svg>
+                          <span>500</span>
+                          <span>Ужин</span>
+                    </div >
+                    <div class="additional-data__diogram-element">
+                        <svg width="48px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="100%" height="100%" fill="#68d97b" />
+                          </svg>
+                          <span>500</span>
+                          <span>Ужин</span>
+                    </div>
+                    <div class="additional-data__diogram-element">
+                        <svg width="48px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="100%" height="100%" fill="#68d97b" />
+                          </svg>
+                          <span>500</span>
+                          <span>Ужин</span>
+                    </div>
+                </div>
+            </div>
+            <div class="button button_size_2x48px button_type_round"> подробнее</div>
+        </div>
+
     </div>
 
     <footer>

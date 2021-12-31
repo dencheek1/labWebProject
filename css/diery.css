@@ -81,6 +81,89 @@
     font-size: 1em;
     text-align: left; }
 
+.statistics {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .statistics__graph {
+    width: 708px;
+    height: 560px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .statistics__graph-dates {
+      width: 548px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 24px;
+      border-bottom: #424242 solid 3px;
+      margin: 12px 0; }
+  .statistics__elements, .statistics__recomendations {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center; }
+    .statistics__elements .block, .statistics__recomendations .block {
+      width: 468px;
+      height: 274px;
+      margin: 0 0px 12px 12px; }
+  .statistics__recomendation > * {
+    margin: 12px;
+    margin-left: 80px; }
+  .statistics__micro {
+    display: flex;
+    flex-direction: column; }
+    .statistics__micro > * {
+      margin: 12px 0 0 0;
+      margin-left: 80px; }
+    .statistics__micro-diogram-element {
+      margin: 6px;
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .statistics__micro-diogram-element .statistics__micro-diogram-text {
+        width: 80px;
+        line-height: 1; }
+      .statistics__micro-diogram-element .statistics__micro-diogram-data {
+        font-weight: bold;
+        color: #68d97b; }
+      .statistics__micro-diogram-element .progressbar {
+        width: 228px; }
+  .statistics__header {
+    margin: 12px 0px 18px 80px; }
+  .statistics__bfc .statistics__diogram {
+    margin: 12px 12px 12px 12px;
+    position: relative;
+    line-height: 1; }
+    .statistics__bfc .statistics__diogram-text {
+      position: absolute;
+      left: 57px;
+      top: 62px; }
+      .statistics__bfc .statistics__diogram-text h3:last-child {
+        color: #68d97b;
+        font-weight: bold; }
+  .statistics__flex-wraper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center; }
+  .statistics__bfc-data-table {
+    table-layout: auto;
+    width: 100%; }
+  .statistics__bfc-data-cell {
+    margin: 0 24px;
+    height: 50px;
+    font-weight: bold;
+    color: #424242;
+    font-size: 1em;
+    text-align: left; }
+
 .header {
   min-width: 1600px;
   height: 128px;
@@ -109,83 +192,6 @@
   .statistics .statistics__elements {
     flex-direction: row; } }
 
-.additional-data {
-  margin: 68px 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  flex-wrap: wrap; }
-  .additional-data__block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 548px;
-    min-height: 492px;
-    margin: 6px; }
-    .additional-data__block .additional-data__header {
-      display: flex;
-      justify-content: space-between;
-      margin: 24px;
-      width: 412px; }
-      .additional-data__block .additional-data__header-nav {
-        display: flex;
-        justify-content: space-between;
-        width: 126px; }
-        .additional-data__block .additional-data__header-nav .icon {
-          transition: 0.2s;
-          width: 40px;
-          position: relative; }
-          .additional-data__block .additional-data__header-nav .icon::after {
-            transition: 0.2s;
-            display: block;
-            content: " ";
-            background: #808080;
-            width: 16px;
-            height: 6px;
-            margin: 0 auto; }
-          .additional-data__block .additional-data__header-nav .icon[selected] svg > * {
-            fill: #424242; }
-          .additional-data__block .additional-data__header-nav .icon[selected]::after {
-            background: #f14150;
-            width: 100%; }
-        .additional-data__block .additional-data__header-nav .icon:hover svg > * {
-          fill: #424242; }
-        .additional-data__block .additional-data__header-nav .icon:hover::after {
-          background: #424242;
-          width: 100%; }
-  .additional-data__table {
-    margin: 12px 24px 24px 24px;
-    width: 412px;
-    height: 100%; }
-  .additional-data .button {
-    margin-bottom: 24px; }
-  .additional-data .additional-data__diogram-wraper {
-    width: 412px;
-    display: flex;
-    flex-direction: row; }
-    .additional-data .additional-data__diogram-wraper .additional-data__diogram {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 252px; }
-      .additional-data .additional-data__diogram-wraper .additional-data__diogram-element {
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        .additional-data .additional-data__diogram-wraper .additional-data__diogram-element span {
-          font-weight: bold;
-          font-size: 1.25em; }
-      .additional-data .additional-data__diogram-wraper .additional-data__diogram-text {
-        color: red; }
-  .additional-data__diogram-selector .select-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80px;
-    height: 100%;
-    overflow: hidden; }
-
 .slider {
   display: flex;
   flex-direction: row;
@@ -193,4 +199,10 @@
   .slider > * {
     margin: 12px; }
 
-/*# sourceMappingURL=stats.css.map */
+.diery-block__search {
+  width: 388px;
+  margin: 12px; }
+  .diery-block__search .search-block > * {
+    margin: 12px; }
+
+/*# sourceMappingURL=diery.css.map */

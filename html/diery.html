@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/diery.css">
+
+    <title>diery</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__logo">
+            <div class="logo">
+                <img class="logo__icon" src="../img/logo.png" alt="">
+                <h1 class="logo__header">dinnager</h1>
+            </div>
+        </div>
+        <nav class="header__navigation">
+            <div class="header__links">
+
+                <div class="button button_size_2x48px button_type_left">Главная</div>
+                <div class="button button_size_2x48px button_type_square">Статистика</div>
+                <div class="button button_size_2x48px button_type_square">Дневник</div>
+                <div class="button button_size_2x48px button_type_square">Планы</div>
+                <div class="button button_size_2x48px button_type_right">Профиль</div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="diery-block">
+        <div class="diery-block__search">
+            <div class="block search-block">
+                <ul class="select-list">
+                  <li class="select-list__item">
+                    <input type="radio" name="select-item" id="select-item-favorites">
+                    <label class="select-list__label" for="select-item-favorites">избранное</label>
+                  </li>
+                  <li class="select-list__item">
+                    <input type="radio" name="select-item" id="select-item-category">
+                    <label class="select-list__label" for="select-item-category">категории</label>
+                  </li>
+                  <li class="select-list__item">
+                    <input type="radio" checked name="select-item" id="select-item-search">
+                    <label class="select-list__label" for="select-item-search">поиск</label>
+                  </li>
+                </ul>
+          
+                <div class="search-block__controls">
+                  <div class="text-field">
+                    <input class="text-field__input" type="text" name="text" id="text">
+                    <label class="text-field__label" for="text">field name</label>
+                  </div>
+                </div>
+                <div class="search-block__search-result">
+                  <ul class="list">
+                    <li class="list__item">
+                      <input class="list__input" type="checkbox" name="category" id="category-1">
+                      <label class="list__input-label" for="category-1">
+                        <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
+                            stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
+                          <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080"
+                            stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
+                        </svg>
+                        <h4>Category</h4>
+                      </label>
+                      <ul class="list__sublist">
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="list__item">
+                      <input class="list__input" type="checkbox" name="category" id="category-2">
+                      <label class="list__input-label" for="category-2">
+                        <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
+                            stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
+                          <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080"
+                            stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
+                        </svg>
+                        <h4>Category</h4>
+                      </label>
+                      <ul class="list__sublist">
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="list__item">
+                      <input class="list__input" type="checkbox" name="category" id="category-3">
+                      <label class="list__input-label" for="category-3">
+                        <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
+                            stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
+                          <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080"
+                            stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
+                        </svg>
+                        <h4>Category</h4>
+                      </label>
+          
+                      <ul class="list__sublist">
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="list__item">
+                      <input class="list__input" type="checkbox" name="category" id="category-4">
+                      <label class="list__input-label" for="category-4">
+                        <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
+                            stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
+                          <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080"
+                            stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
+                        </svg>
+                        <h4>Category</h4>
+                      </label>
+                      <ul class="list__sublist">
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list__subitem">
+                          <div class="food-item">
+                            <div class="food-item__icon food-item__icon_type_none"></div>
+                            <div class="food-item__text">
+                              <div class="food-item__title">
+                                <h4>Кура гриля</h4>
+                              </div>
+                              <div class="food-item__descriprion">много, очень</div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="statistics">
+        <div class="statistics__elements">
+            <div class="statistics__bfc block">
+                <h2 class="statistics__header">Доля БЖУ в питании</h2>
+                <div class="statistics__flex-wraper">
+                    <div class="statistics__diogram">
+                        <div class="statistics__diogram-text">
+                            <h4>всего</h4>
+                            <h3>333g</h3>
+                        </div>
+                        <svg width="160px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f14150" stroke-width="10"
+                                    stroke-dasharray="440" stroke-dashoffset="0" />
+                                <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f5f557" stroke-width="14"
+                                    stroke-dasharray="440" stroke-dashoffset="220" />
+                                <circle cx="50%" cy="50%" r="70" fill="none" stroke="#68d97b" stroke-width="18"
+                                    stroke-dasharray="440" stroke-dashoffset="400" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="statistics__bfc-text">
+                        <table class="statistics__bfc-data-table">
+                            <tr class="statistics__bfc-data-row">
+                                <td class="statistics__bfc-data-cell">A</td>
+                                <th class="statistics__bfc-data-cell">Белки</th>
+                                <td class="statistics__bfc-data-cell">B</td>
+                                <td class="statistics__bfc-data-cell">X</td>
+                            </tr>
+                            <tr class="statistics__bfc-data-row">
+                                <td class="statistics__bfc-data-cell ">A</td>
+                                <th class="statistics__bfc-data-cell">Жиры</th>
+                                <td class="statistics__bfc-data-cell">B</td>
+                                <td class="statistics__bfc-data-cell">Y</td>
+                            </tr>
+                            <tr class="statistics__bfc-data-row">
+                                <td class="statistics__bfc-data-cell ">A</td>
+                                <th class="statistics__bfc-data-cell">Углеводы</th>
+                                <td class="statistics__bfc-data-cell">B</td>
+                                <td class="statistics__bfc-data-cell">Y</td>
+                            </tr>
+                        </table>
+                        <h3>БЖУ 15:11:1</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="statistics__micro block">
+                <h2>Макроэлементы</h2>
+                <div class="statistics__micro-diogram">
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >калории <br> <span class="statistics__micro-diogram-data">200</span> </span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >вода<br> <span class="statistics__micro-diogram-data">200</span></span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >белки <br><span class="statistics__micro-diogram-data">200</span> </span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >жиры <br><span class="statistics__micro-diogram-data">200</span> </span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="statistics__micro-diogram-element">
+                        <span class="statistics__micro-diogram-text" >углеводы <br><span class="statistics__micro-diogram-data">200</span> </span>
+                        <div class="progressbar">
+                            <div class="progressbar__fill">
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="statistics__graph block">
+            <div class="slider week-select">
+
+                <div class="slider__prev"><img src="../img/left.png" alt=""></div>
+                <h2 class="slider__text">Номер недели</h2>
+                <div class="slider__next"><img src="../img/right.png" alt=""></div>
+
+            </div>
+            <svg width="548px" height="330px">
+                <path id="p1" d="
+                    M 0 100 H 51 L 96 200 
+                    H 125 L 180 300
+                    H 205 L 265 150
+                    H 290 L 345 250
+                    H 370 L 425 310
+                    H 450 L 500 190
+                    H 548 
+                      " fill="none" stroke="#808080" stroke-linejoin="round" stroke-width="8px">
+            </svg>
+            <div class="statistics__graph-dates">
+                <div class="date date_size_small">
+                    <span class="date__month-date">20</span>
+                    <span class="date__day-of-week">Monday</span>
+                </div>
+                <div class="date date_size_small">
+                    <span class="date__month-date">20</span>
+                    <span class="date__day-of-week">Monday</span>
+                </div>
+                <div class="date date_size_small">
+                    <span class="date__month-date">20</span>
+                    <span class="date__day-of-week">Monday</span>
+                </div>
+                <div class="date date_size_small">
+                    <span class="date__month-date">20</span>
+                    <span class="date__day-of-week">Monday</span>
+                </div>
+                <div class="date date_size_small">
+                    <span class="date__month-date">20</span>
+                    <span class="date__day-of-week">Monday</span>
+                </div>
+                <div class="date date_size_small">
+                    <span class="date__month-date">20</span>
+                    <span class="date__day-of-week">Monday</span>
+                </div>
+                <div class="date date_size_small">
+                    <span class="date__month-date">20</span>
+                    <span class="date__day-of-week">Monday</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="statistics__recomendations">
+            <div class="block">ttt</div>
+        </div>
+
+    </div>
+
+    <footer>
+        contact
+    </footer>
+</body>
+
+</html>

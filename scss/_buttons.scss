@@ -128,7 +128,7 @@ $bt : ".button_type_";
    }
 
     input:checked + &__label{
-        color:$main_color;
+        span{color:$main_color;}
         border: 4px solid $main_color;
    }
 
