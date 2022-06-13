@@ -1,0 +1,140 @@
+
+.statistics{
+
+    margin-top:64px;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__graph{
+        width:708px;
+        height:560px;
+        margin-bottom:12px;
+        margin-left:12px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-dates{
+            width:548px;
+            display:flex;
+            flex-direction: row;;
+            justify-content: space-between;
+            padding-bottom:24px;
+            border-bottom: $dark_color solid 3px;
+            margin:12px 0;
+        }
+
+    }
+
+    &__elements, &__recomendations{
+
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+
+        .block{
+            width:468px;
+            height:274px;
+            margin:0 0px 12px 12px;
+        }
+    }
+    
+    &__recomendation{
+        & > *{
+            margin:12px;
+            margin-left:80px;
+        }
+
+        &-header{
+        }
+    }
+
+    &__micro{
+
+        display:flex;
+        flex-direction: column;
+
+        & > *{
+            margin:12px 0 0 0;
+            margin-left:80px;
+        }
+
+        &-diogram-element{
+            margin:6px;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            .statistics__micro-diogram-text{
+                width:80px;
+                line-height: 1;
+            }
+
+            .statistics__micro-diogram-data{
+                font-weight: bold;
+                color:$additional_color;
+            }
+
+            .progressbar{
+                width:228px;
+            }
+        }
+
+    }
+
+    &__header{
+        margin:12px 0px 18px 80px;
+    }
+
+
+    &__bfc{
+        .statistics__diogram{
+            margin:12px 12px 12px 12px;
+            position: relative;
+            line-height: 1;
+    
+            &-text{
+                position: absolute;
+                left:57px;
+                top: 62px;
+                h3:last-child{
+                    color:$additional_color;
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+
+    &__flex-wraper{
+        display: flex;
+        flex-direction:row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__bfc-data{
+        &-table{
+            table-layout: auto;
+            width:100%;
+        }
+
+        &-row{
+
+        }
+
+        &-cell{
+            margin: 0 24px;
+            height:50px;
+            font-weight:bold;
+            color: $dark_color;
+            font-size:  1em;
+            text-align: left;
+        }
+    }
+
+}

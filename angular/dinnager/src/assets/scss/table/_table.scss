@@ -1,0 +1,35 @@
+@import "../colors";
+
+.table{
+
+    border-collapse: collapse;
+
+    &__header{
+        text-align: right;
+        border-bottom: 2px solid $dark_gray;
+        vertical-align: bottom;
+        height:54px;
+        width:92px;
+        font-size: 1.15em;
+
+        &:first-child{
+            text-align: left;
+        }
+    }
+
+    &__data{
+        text-align: right;
+        border-bottom: 2px solid $dark_gray;
+        vertical-align: center;
+        height:54px;
+        font-size: 1em;
+        
+        &:first-child{
+            text-align: left;
+        }
+    }
+
+    & tr:last-of-type  &__data, &__header{
+        border:none;
+    }
+}

@@ -1,0 +1,118 @@
+@import 'colors';
+
+.list{
+
+    .list__item{
+
+        input{
+            display:none;
+        }
+
+        .list__input + .list__input-label{
+            display:block;
+            color:$grey;
+            height:52px;
+            width:100%;
+            line-height: 52px;
+            border-bottom:4px solid $grey;
+            display: inline-flex;
+            
+            
+            .icon{
+                display:inline-block;
+                width:32px;
+                height: 32px;
+                margin: 10px 12px;
+                background: #ffffffff;
+                transition:0.4s;
+                
+                &__top{
+                    transition:inherit;
+                    stroke:$dark_color;
+                    stroke-dashoffset:42;
+                }
+                &__bottom{
+                    transition:inherit;
+                    stroke:$grey;
+                    stroke-dashoffset:0;
+                }
+
+                /*
+                &:hover{
+                
+                    .icon__{
+                        &top{
+                            stroke:$main_color;
+                            stroke-dashoffset:84;
+                        }
+                        &bottom{
+                            stroke-dashoffset:42;
+                        }
+                    }
+                }
+
+                &::before, &::after {
+                    transition:0.4s;
+                    content:"";
+                    display:block;
+                    position: relative;
+                    width:18px;
+                    height:4px;
+                    border-radius: 3px;
+                    background: $grey;
+                    transform-origin: center;
+                }
+                &::before {
+                    left: 12px;
+                    top:13px;
+                    transform: rotateZ(-45deg);
+                }
+                &::after {
+                    left:2px;
+                    top:9px;
+                    transform: rotateZ(45deg);
+                }
+                */
+            }
+
+        }
+
+        .list__sublist{
+
+            margin-left: 18px;
+            position:absolute;
+            visibility: hidden;
+            opacity: 0;
+
+        }
+
+        .list__input:checked ~ {
+            .list__sublist{
+                transform:translateY(0);
+                max-height: unset;
+                opacity: 1;
+                visibility: visible;
+                position:relative;
+
+            }
+
+            .list__input-label{
+                color:$dark_color;
+                border-bottom: none;
+                .icon{
+                    
+                    &__top{
+                        stroke-dashoffset:84;
+                    }
+                    &__bottom{
+                        stroke-dashoffset:42;
+                    }
+                    
+                }
+
+
+            }
+        }
+    }
+
+}

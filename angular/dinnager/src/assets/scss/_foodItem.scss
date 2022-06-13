@@ -1,0 +1,23 @@
+@import 'colors';
+.food-item{
+    width:340px;
+    height:52px;
+    border-bottom: 4px solid $dark_gray;
+    display:inline-flex;
+    align-items: center;
+    color:$dark_gray;
+    transition:0.2s;
+
+    &:hover{
+        color:$dark_color;
+        border-bottom: 4px solid $dark_color;
+    }
+
+    &__icon{
+        height: 32px;
+        width:32px;
+        background-color: $dark_color;
+        display:block;
+        margin-right: 10px;
+    }
+}

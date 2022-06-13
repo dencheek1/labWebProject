@@ -1,0 +1,117 @@
+@import "../colors";
+
+.search-block{
+
+    height:710px;
+    display:flex;
+    flex-direction: column;
+    .select-list{
+        display: inline-flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width:388px;
+        color:$dark_gray;
+        font-size: 1.25em;
+        font-weight: 800;
+        
+        
+        input {
+            display:none;
+        }
+
+        &__item{
+            input:checked + .select-list__label{
+                color:$main_color;
+                &::before{
+                    background: $main_color;
+                    width:100%;
+                }
+            }
+        }
+
+        .select-list__label{
+            display:block;
+            width: 110px;
+            margin:0;
+            text-align: center;
+            transition:0.2s;
+            &::before{
+                content: "";
+                display:block;
+                margin:0 auto;
+                transform: translateY(33px);
+                position:relative;
+                width: 20px;
+                height: 4px;
+                background: $dark_gray;
+                transition:0.2s;
+
+            }
+
+            &:hover{
+                color:$dark_color;
+                &::before{
+                    background: $dark_color;
+                    width:100%;
+                }
+            }
+        }
+    }
+
+    .search-block__search-result{
+        overflow:scroll;
+    }
+}
+
+.select-list{
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width:388px;
+    color:$dark_gray;
+    font-size: 1.25em;
+    font-weight: 800;
+    
+    
+    input {
+        display:none;
+    }
+
+    &__item{
+        input:checked + .select-list__label{
+            color:$main_color;
+            &::before{
+                background: $main_color;
+                width:100%;
+            }
+        }
+    }
+
+    .select-list__label{
+        display:block;
+        width: 110px;
+        margin:0;
+        text-align: center;
+        transition:0.2s;
+        &::before{
+            content: "";
+            display:block;
+            margin:0 auto;
+            transform: translateY(33px);
+            position:relative;
+            width: 20px;
+            height: 4px;
+            background: $dark_gray;
+            transition:0.2s;
+
+        }
+
+        &:hover{
+            color:$dark_color;
+            &::before{
+                background: $dark_color;
+                width:100%;
+            }
+        }
+    }
+}

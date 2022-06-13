@@ -1,0 +1,25 @@
+@import 'colors';
+
+.logo{
+    position:static;
+    width: 874px;
+    height: 128px;
+    background-color:$main_color;
+    display:inline-flex;
+    align-items: center;
+    line-height: 128px;
+    border-bottom-right-radius: 35px;
+
+    .logo__icon{
+        position:relative;
+        margin-left:86px;
+    }
+
+    .logo__header{
+        color:$background_color;
+        font-size: 64px;
+        position:relative;
+        margin-left:48px;
+    }
+
+}

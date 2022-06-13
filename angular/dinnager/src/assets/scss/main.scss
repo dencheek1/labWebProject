@@ -1,0 +1,139 @@
+@import 'colors';
+
+.header{
+    width:100%;
+    height:128px;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+
+    .header__navigation{
+        width:100%;
+        display:flex;
+        justify-content: center;
+        .header__links{
+           
+            align-self: center;
+            display:flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            padding-left:164px;
+            .button{
+                margin-right: 12px;
+            }
+
+        }        
+    }
+
+    @media screen and  (max-width:1600px) {
+        
+        .header__logo{
+            .logo{
+                width:634px;
+            }
+        }
+        
+        .header__navigation{
+            
+            .header__links{
+               
+
+                padding-left:12px;
+                .button{
+                    margin-right: 12px;
+                }
+    
+            }        
+        }
+    }
+
+    @media screen and  (max-width:1280px) {
+        
+        .header__logo{
+            .logo{
+                width:474px;
+                &__icon{
+                    margin-left:46px;
+                }
+            }
+        }
+        
+    }
+
+}
+
+.information{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    .informtation__blocks{
+
+
+        @media screen and(max-width:1600px){
+            width: 1108px;
+        }
+
+        @media screen and(max-width:1200px){
+            width: 800px;
+        }
+        @media screen and(max-width:992px){
+            width: 800px;
+        }
+
+        @media screen and(max-width:600px){
+            width: 100%;
+        }
+
+        margin:96px 0 32px 0;
+        width:1640px;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .block{
+            height:468px;
+            width:468px;
+            margin:32px 0;
+
+            display:flex;
+            flex-direction : column;
+            justify-content: space-between;
+            align-items: center;
+            
+            .information__heading{
+                font-weight: normal;
+                font-size: 40px;
+                margin:6px 0 24px 0;
+
+            }
+            .information__text{
+                font-weight: normal;
+                font-size: 24px;
+                margin: 24px;
+                color:$dark_color;
+                text-align:center;
+                line-height: 1;
+            }
+            .information__img{
+
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .information{
+
+        .infromtation__blocks{
+    
+            width:1108px;
+
+        }
+    }
+}
