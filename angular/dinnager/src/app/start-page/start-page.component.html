@@ -45,3 +45,9 @@
             <div class="button button_size_3x64px button_type_round">подробнее</div>
         </div>
     </div>
+
+    <div *ngIf="action" class="form_background">
+        <app-sign-in-form class="block form-component" *ngIf="action=='sign in'"></app-sign-in-form>
+        <app-registration-form class="block form-component" *ngIf="action=='sign up'"></app-registration-form>
+        <div (click)="button('')" *ngIf="action" class="form_background"></div>
+    </div>

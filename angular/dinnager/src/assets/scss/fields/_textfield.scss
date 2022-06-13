@@ -1,44 +1,45 @@
 @import "../colors";
 
-.text-field{
+.text-field {
 
-    height:48px;
-    width:100%;
-    display:block;
-    position:relative;
+    height: 48px;
+    width: 100%;
+    display: block;
+    position: relative;
 
-    .text-field__input{
-        display:block;
-        outline:none;
-        height:100%;
-        width:100%;
+    .text-field__input {
+        display: block;
+        outline: none;
+        height: 100%;
+        width: 100%;
         border: 2px solid $grey;
         border-radius: 15px;
-        transition:0.2s;
+        transition: 0.2s;
         font-size: 1.25em;
-        color:$grey;
-        padding:0px 12px;
+        color: $grey;
+        padding: 0px 12px;
 
-    &:focus{
-        border:2px solid $dark_color;
-        color:$dark_color;
-        & + .text-field__label{
-            color:$dark_color;
+        &:focus {
+            border: 2px solid $dark_color;
+            color: $dark_color;
+
+            &+.text-field__label {
+                color: $dark_color;
+            }
         }
-    }
 
 
     }
 
-    &__label{
-        position:absolute;
+    &__label {
+        position: absolute;
         display: block;
-        padding:0px 4px 0px 4px;
+        padding: 0px 4px 0px 4px;
         line-height: 1;
         font-size: 1em;
-        color:$grey;
+        color: $grey;
         background-color: $background_color;
         transform: translateX(20px) translateY(-55px);
-        transition:0.2s;
+        transition: 0.2s;
     }
 }

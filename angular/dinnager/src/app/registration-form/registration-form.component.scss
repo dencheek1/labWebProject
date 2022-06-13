@@ -1,0 +1,24 @@
+@import "../../assets/scss/style.scss";
+
+
+.wraper {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &>* {
+        margin-top: 24px;
+    }
+
+    input.ng-touched.ng-invalid {
+        border-color: $main_color;
+        color: $main_color;
+
+    }
+
+    input.ng-touched.ng-valid {
+        border-color: $additional_color;
+    }
+
+}

@@ -1,0 +1,12 @@
+<form [formGroup]="signIn" class="wraper" (ngSubmite)="submit()">
+  <h3>Вход</h3>
+  <div class="text-field">
+    <input formControlName="email" class="text-field__input" type="text" name="email" id="email">
+    <label class="text-field__label" for="email">email</label>
+  </div>
+  <div class="text-field">
+    <input formControlName="password" class="text-field__input" type="password" name="password" id="password">
+    <label class="text-field__label" for="password">password</label>
+  </div>
+  <button [disabled]="signIn.invalid" (click)="submit()" class="button button_size_2x48px button_type_round">вход</button>
+</form>

@@ -14,7 +14,6 @@ export class StartPageComponent implements OnInit {
 
   button(str: string) {
     this.action = str;
-    alert(this.action);
   }
 
   ngOnInit(): void {
