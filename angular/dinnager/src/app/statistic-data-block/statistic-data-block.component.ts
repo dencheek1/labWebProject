@@ -13,7 +13,7 @@ export class StatisticDataBlockComponent implements OnInit {
   @Input() data!: HistoryData[];
 
   dataSum: HistoryData = { name: "Всего", carb: 0, fat: 0, kkal: 0, prot: 0 };
-
+  maxKkal:number = 0;
 
   constructor() { }
   ngOnInit(): void {
@@ -24,6 +24,9 @@ export class StatisticDataBlockComponent implements OnInit {
         prot: this.data.reduce((sum, dt) => sum += dt.prot, 0),
         kkal: this.data.reduce((sum, dt) => sum += dt.kkal, 0),
       };
+
+      let items = this.data.map(d=>d.kkal).filter(val=> !isNaN(val));
+      this.maxKkal = Math.max(...items);
     }
   }
 
