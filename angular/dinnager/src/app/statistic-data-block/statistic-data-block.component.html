@@ -34,16 +34,16 @@
     <tr *ngFor="let d of data">
         <td class="table__data">{{d.name}}</td>
         <td class="table__data">{{d.kkal}}</td>
-        <td class="table__data">{{d.prot}}.г</td>
-        <td class="table__data">{{d.fat}}.г</td>
-        <td class="table__data">{{d.carb}}.г</td>
+        <td class="table__data">{{d.prot}} г</td>
+        <td class="table__data">{{d.fat}} г</td>
+        <td class="table__data">{{d.carb}} г</td>
     </tr>
     <tr>
         <td class="table__data">{{dataSum.name}}</td>
         <td class="table__data">{{dataSum.kkal}}</td>
-        <td class="table__data">{{dataSum.prot}}.г</td>
-        <td class="table__data">{{dataSum.fat}}.г</td>
-        <td class="table__data">{{dataSum.carb}}.г</td>
+        <td class="table__data">{{dataSum.prot}} г</td>
+        <td class="table__data">{{dataSum.fat}} г</td>
+        <td class="table__data">{{dataSum.carb}} г</td>
     </tr>
 </table>
 <div *ngIf="!isTable" class="additional-data__diogram-wraper">
@@ -62,7 +62,7 @@
     <div class="additional-data__diogram">
         <div *ngFor="let d of data" class="additional-data__diogram-element">
             <svg width="48px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" [attr.y]="100*(1-d.kkal/maxKkal)+'%'" width="100%" height="100%" fill="#68d97b" />
+                <rect x="0" [attr.y]="95*(1-d.kkal/maxKkal) + '%'" width="100%" height="100%" [attr.fill]="getColor(d)" />
             </svg>
             <span>{{d.kkal}}</span>
             <span>{{d.name}}</span>

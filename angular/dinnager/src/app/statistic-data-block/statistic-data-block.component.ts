@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HistoryData } from '../model/historyData';
+import { HistoryData } from '../../model/historyData';
 
 @Component({
   selector: 'app-statistic-data-block',
@@ -9,10 +9,11 @@ import { HistoryData } from '../model/historyData';
 export class StatisticDataBlockComponent implements OnInit {
 
   isTable: boolean = true;
+  normalColor:string = "68d97b";
   @Input() title!: string;
   @Input() data!: HistoryData[];
 
-  dataSum: HistoryData = { name: "Всего", carb: 0, fat: 0, kkal: 0, prot: 0 };
+  dataSum: HistoryData = { name: "Всего", carb: 0, fat: 0, kkal: 0, prot: 0,water:0, };
   maxKkal:number = 0;
 
   constructor() { }
@@ -23,6 +24,7 @@ export class StatisticDataBlockComponent implements OnInit {
         carb: this.data.reduce((sum, dt) => sum += dt.carb, 0),
         prot: this.data.reduce((sum, dt) => sum += dt.prot, 0),
         kkal: this.data.reduce((sum, dt) => sum += dt.kkal, 0),
+        water:0,
       };
 
       let items = this.data.map(d=>d.kkal).filter(val=> !isNaN(val));
@@ -35,6 +37,13 @@ export class StatisticDataBlockComponent implements OnInit {
   }
   selectDiogram(): void {
     this.isTable = false;
+  }
+
+  getColor(data:HistoryData):string{
+
+    // if(data.kkal < 50 || data.kkal > 800) return "#f14150";
+    // if(data.kkal < 200 || data.kkal > 400) return "#f5f557";
+    return "#68d97b"
   }
 
 }

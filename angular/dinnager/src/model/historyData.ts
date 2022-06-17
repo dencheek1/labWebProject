@@ -4,4 +4,5 @@ export interface HistoryData{
     fat:number;
     prot:number;
     carb:number;
+    water:number;
 }

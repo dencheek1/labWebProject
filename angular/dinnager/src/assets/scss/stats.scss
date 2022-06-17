@@ -2,7 +2,7 @@
 @import "statistics";
 
 .header {
-    min-width: 1600px;
+    // min-width: 1600px;
     height: 128px;
 
     display: flex;
@@ -10,9 +10,9 @@
     justify-content: flex-start;
 
     .header__logo {
-        .logo {
+
             width: 634px;
-        }
+
     }
 
     .header__navigation {
@@ -26,7 +26,7 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-left: -52px;
+            // margin-left: -52px;
 
             .button {
                 margin-right: 12px;
@@ -54,7 +54,7 @@
 }
 
 .additional-data {
-    margin: 68px 0;
+    margin: 44px 0;
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -67,7 +67,7 @@
         justify-content: space-between;
         width: 548px;
         min-height: 492px;
-        margin: 6px;
+        margin: 24px 6px;
 
     }
 

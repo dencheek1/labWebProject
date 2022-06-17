@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainPageComponent } from './main-page/main-page.component';
 import { StatsPageComponent } from './stats-page/stats-page.component';
 import { StatisticDataBlockComponent } from './statistic-data-block/statistic-data-block.component';
+import { StatisticDiogramBlockComponent } from './statistic-diogram-block/statistic-diogram-block.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StatisticDataBlockComponent } from './statistic-data-block/statistic-da
     SignInFormComponent,
     MainPageComponent,
     StatsPageComponent,
-    StatisticDataBlockComponent
+    StatisticDataBlockComponent,
+    StatisticDiogramBlockComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,44 @@
+<div class="statistics__bfc">
+    <h2 class="statistics__header">Доля БЖУ в питании</h2>
+    <div class="statistics__flex-wraper">
+        <div class="statistics__diogram">
+            <div class="statistics__diogram-text">
+                <h4>всего</h4>
+                <h3>{{weightSum}} г</h3>
+            </div>
+            <svg width="160px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f14150" stroke-width="10"
+                        stroke-dasharray="440" stroke-dashoffset="0" />
+                    <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f5f557" stroke-width="14"
+                        stroke-dasharray="440" [attr.stroke-dashoffset]="440-440*(1-(data.prot)/weightSum)" />
+                    <circle cx="50%" cy="50%" r="70" fill="none" stroke="#68d97b" stroke-width="18"
+                        stroke-dasharray="440" [attr.stroke-dashoffset]="440-440*(1-(data.carb+data.prot)/weightSum)" />
+                </g>
+            </svg>
+        </div>
+        <div class="statistics__bfc-text">
+            <table class="statistics__bfc-data-table">
+                <tr class="statistics__bfc-data-row">
+                    <td class="statistics__bfc-data-cell">A</td>
+                    <th class="statistics__bfc-data-cell">Белки</th>
+                    <td class="statistics__bfc-data-cell">B</td>
+                    <td class="statistics__bfc-data-cell">X</td>
+                </tr>
+                <tr class="statistics__bfc-data-row">
+                    <td class="statistics__bfc-data-cell ">A</td>
+                    <th class="statistics__bfc-data-cell">Жиры</th>
+                    <td class="statistics__bfc-data-cell">B</td>
+                    <td class="statistics__bfc-data-cell">Y</td>
+                </tr>
+                <tr class="statistics__bfc-data-row">
+                    <td class="statistics__bfc-data-cell ">A</td>
+                    <th class="statistics__bfc-data-cell">Углеводы</th>
+                    <td class="statistics__bfc-data-cell">B</td>
+                    <td class="statistics__bfc-data-cell">Y</td>
+                </tr>
+            </table>
+            <h3>БЖУ 15:11:1</h3>
+        </div>
+    </div>
+</div>

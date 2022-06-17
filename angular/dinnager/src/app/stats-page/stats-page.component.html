@@ -20,135 +20,66 @@
     <div class="statistics__graph block">
         <div class="slider week-select">
 
-            <div class="slider__prev"><img src="../img/left.png" alt=""></div>
-            <h2 class="slider__text">Номер недели</h2>
-            <div class="slider__next"><img src="../img/right.png" alt=""></div>
+            <div (click)="prevWeek()" class="slider__prev"><img src="../../assets/img/left.png" alt=""></div>
+            <h2 class="slider__text">Номер недели {{weekNumber(date)}}</h2>
+            <div (click)="nextWeek()" class="slider__next"><img src="../../assets/img/right.png" alt=""></div>
 
         </div>
         <svg width="548px" height="330px">
-            <path id="p1" d="
-                M 0 100 H 51 L 96 200 
-                H 125 L 180 300
-                H 205 L 265 150
-                H 290 L 345 250
-                H 370 L 425 310
-                H 450 L 500 190
-                H 548 
-                  " fill="none" stroke="#808080" stroke-linejoin="round" stroke-width="8px"/>
+            <path id="p1" [attr.d]="statDiogram"
+                fill="none" stroke="#808080" stroke-linejoin="round" stroke-width="8px" />
         </svg>
         <div class="statistics__graph-dates">
-            <div class="date date_size_small">
-                <span class="date__month-date">20</span>
-                <span class="date__day-of-week">Monday</span>
-            </div>
-            <div class="date date_size_small">
-                <span class="date__month-date">20</span>
-                <span class="date__day-of-week">Monday</span>
-            </div>
-            <div class="date date_size_small">
-                <span class="date__month-date">20</span>
-                <span class="date__day-of-week">Monday</span>
-            </div>
-            <div class="date date_size_small">
-                <span class="date__month-date">20</span>
-                <span class="date__day-of-week">Monday</span>
-            </div>
-            <div class="date date_size_small">
-                <span class="date__month-date">20</span>
-                <span class="date__day-of-week">Monday</span>
-            </div>
-            <div class="date date_size_small">
-                <span class="date__month-date">20</span>
-                <span class="date__day-of-week">Monday</span>
-            </div>
-            <div class="date date_size_small">
-                <span class="date__month-date">20</span>
-                <span class="date__day-of-week">Monday</span>
+            <div *ngFor="let day of week" class="date date_size_small">
+                <span class="date__month-date">{{day.getDate()}}</span>
+                <span class="date__day-of-week">{{getStringDay(day)}}</span>
             </div>
         </div>
     </div>
     <div class="statistics__elements">
-        <div class="statistics__bfc block">
-            <h2 class="statistics__header">Доля БЖУ в питании</h2>
-            <div class="statistics__flex-wraper">
-                <div class="statistics__diogram">
-                    <div class="statistics__diogram-text">
-                        <h4>всего</h4>
-                        <h3>333g</h3>
-                    </div>
-                    <svg width="160px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f14150" stroke-width="10"
-                                stroke-dasharray="440" stroke-dashoffset="0" />
-                            <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f5f557" stroke-width="14"
-                                stroke-dasharray="440" stroke-dashoffset="220" />
-                            <circle cx="50%" cy="50%" r="70" fill="none" stroke="#68d97b" stroke-width="18"
-                                stroke-dasharray="440" stroke-dashoffset="400" />
-                        </g>
-                    </svg>
-                </div>
-                <div class="statistics__bfc-text">
-                    <table class="statistics__bfc-data-table">
-                        <tr class="statistics__bfc-data-row">
-                            <td class="statistics__bfc-data-cell">A</td>
-                            <th class="statistics__bfc-data-cell">Белки</th>
-                            <td class="statistics__bfc-data-cell">B</td>
-                            <td class="statistics__bfc-data-cell">X</td>
-                        </tr>
-                        <tr class="statistics__bfc-data-row">
-                            <td class="statistics__bfc-data-cell ">A</td>
-                            <th class="statistics__bfc-data-cell">Жиры</th>
-                            <td class="statistics__bfc-data-cell">B</td>
-                            <td class="statistics__bfc-data-cell">Y</td>
-                        </tr>
-                        <tr class="statistics__bfc-data-row">
-                            <td class="statistics__bfc-data-cell ">A</td>
-                            <th class="statistics__bfc-data-cell">Углеводы</th>
-                            <td class="statistics__bfc-data-cell">B</td>
-                            <td class="statistics__bfc-data-cell">Y</td>
-                        </tr>
-                    </table>
-                    <h3>БЖУ 15:11:1</h3>
-                </div>
-            </div>
-        </div>
+        <app-statistic-diogram-block [data]="data1[0]" class="statistics__bfc block"></app-statistic-diogram-block>
         <div class="statistics__micro block">
             <h2>Макроэлементы</h2>
             <div class="statistics__micro-diogram">
                 <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text" >калории <br> <span class="statistics__micro-diogram-data">200</span> </span>
+                    <span class="statistics__micro-diogram-text">калории <br> <span
+                            class="statistics__micro-diogram-data">200</span> </span>
                     <div class="progressbar">
                         <div class="progressbar__fill">
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text" >вода<br> <span class="statistics__micro-diogram-data">200</span></span>
+                    <span class="statistics__micro-diogram-text">вода<br> <span
+                            class="statistics__micro-diogram-data">200</span></span>
                     <div class="progressbar">
                         <div class="progressbar__fill">
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text" >белки <br><span class="statistics__micro-diogram-data">200</span> </span>
+                    <span class="statistics__micro-diogram-text">белки <br><span
+                            class="statistics__micro-diogram-data">200</span> </span>
                     <div class="progressbar">
                         <div class="progressbar__fill">
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text" >жиры <br><span class="statistics__micro-diogram-data">200</span> </span>
+                    <span class="statistics__micro-diogram-text">жиры <br><span
+                            class="statistics__micro-diogram-data">200</span> </span>
                     <div class="progressbar">
                         <div class="progressbar__fill">
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text" >углеводы <br><span class="statistics__micro-diogram-data">200</span> </span>
+                    <span class="statistics__micro-diogram-text">углеводы <br><span
+                            class="statistics__micro-diogram-data">200</span> </span>
                     <div class="progressbar">
                         <div class="progressbar__fill">
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,8 +98,11 @@
 </div>
 
 <div class="additional-data">
-    <app-statistic-data-block class="additional-data__block block" [data]="data1" [title]="title[0]"></app-statistic-data-block>
-    <app-statistic-data-block class="additional-data__block block" [data]="data2" [title]="title[1]"></app-statistic-data-block>
-    <app-statistic-data-block class="additional-data__block block" [data]="data3" [title]="title[2]"></app-statistic-data-block>
-    
+    <app-statistic-data-block class="additional-data__block block" [data]="data1" [title]="title[0]">
+    </app-statistic-data-block>
+    <app-statistic-data-block class="additional-data__block block" [data]="data2" [title]="title[1]">
+    </app-statistic-data-block>
+    <app-statistic-data-block class="additional-data__block block" [data]="data3" [title]="title[2]">
+    </app-statistic-data-block>
+
 </div>

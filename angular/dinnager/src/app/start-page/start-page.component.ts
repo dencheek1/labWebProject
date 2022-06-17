@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IDinnagerInfo } from '../model/dinnagerInfo';
+import { IDinnagerInfo } from '../../model/dinnagerInfo';
 
 @Component({
   selector: 'app-start-page',
