@@ -1,0 +1,86 @@
+<div class="additional-data__header">
+    <h2>{{title}}</h2>
+    <div class="additional-data__header-nav">
+
+        <div (click)="selectDiogram()" class="icon additional-data__diogram-selector" [attr.selected]="!isTable">
+            <svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="23" width="8" height="40" fill="#808080" />
+                <rect x="10" y="17" width="8" height="40" fill="#808080" />
+                <rect x="20" y="7" width="8" height="40" fill="#808080" />
+                <rect x="30" y="0" width="8" height="40" fill="#808080" />
+            </svg>
+        </div>
+        <div (click)="selectTable()" class="icon additional-data__table-selector" [attr.selected]="isTable">
+            <svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="40" height="8" fill="#808080" />
+                <rect x="12.66" y="10" width="2" height="30" fill="#808080" />
+                <rect x="25.33" y="10" width="2" height="30" fill="#808080" />
+                <rect x="38" y="10" width="2" height="30" fill="#808080" />
+                <rect x="0" y="10" width="2" height="30" fill="#808080" />
+                <rect x="0" y="10" width="40" height="2" fill="#808080" />
+                <rect x="0" y="38" width="40" height="2" fill="#808080" />
+            </svg>
+        </div>
+    </div>
+</div>
+<table *ngIf="isTable" class="additional-data__table table">
+    <tr>
+        <th class="table__data">среднее <br>для</th>
+        <th class="table__data">ккал</th>
+        <th class="table__data">белки</th>
+        <th class="table__data">жиры</th>
+        <th class="table__data">углев.</th>
+    </tr>
+    <tr *ngFor="let d of data">
+        <td class="table__data">{{d.name}}</td>
+        <td class="table__data">{{d.kkal}}</td>
+        <td class="table__data">{{d.prot}}.г</td>
+        <td class="table__data">{{d.fat}}.г</td>
+        <td class="table__data">{{d.carb}}.г</td>
+    </tr>
+    <tr>
+        <td class="table__data">{{dataSum.name}}</td>
+        <td class="table__data">{{dataSum.kkal}}</td>
+        <td class="table__data">{{dataSum.prot}}.г</td>
+        <td class="table__data">{{dataSum.fat}}.г</td>
+        <td class="table__data">{{dataSum.carb}}.г</td>
+    </tr>
+</table>
+<div *ngIf="!isTable" class="additional-data__diogram-wraper">
+    <div class="additional-data__diogram-selector">
+        <ul class="select-list">
+            <li class="select-list__item">
+                <input type="radio" name="select-item" id="select-item-favorites">
+                <label class="select-list__label" for="select-item-favorites">ккал</label>
+            </li>
+            <li class="select-list__item">
+                <input type="radio" name="select-item" id="select-item-category">
+                <label class="select-list__label" for="select-item-category">бжу</label>
+            </li>
+        </ul>
+    </div>
+    <div class="additional-data__diogram">
+        <div class="additional-data__diogram-element">
+            <svg width="48px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="100%" height="100%" fill="#68d97b" />
+            </svg>
+            <span>500</span>
+            <span>Ужин</span>
+        </div>
+        <div class="additional-data__diogram-element">
+            <svg width="48px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="100%" height="100%" fill="#68d97b" />
+            </svg>
+            <span>500</span>
+            <span>Ужин</span>
+        </div>
+        <div class="additional-data__diogram-element">
+            <svg width="48px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="100%" height="100%" fill="#68d97b" />
+            </svg>
+            <span>500</span>
+            <span>Ужин</span>
+        </div>
+    </div>
+</div>
+<div class="button button_size_2x48px button_type_round"> подробнее</div>

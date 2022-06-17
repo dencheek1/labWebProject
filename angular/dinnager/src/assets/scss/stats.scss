@@ -1,166 +1,95 @@
 @import "colors";
 @import "statistics";
 
-.header{
-    min-width:1600px;
-    height:128px;
+.header {
+    min-width: 1600px;
+    height: 128px;
 
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
 
-    .header__logo{
-        .logo{
-            width:634px;
+    .header__logo {
+        .logo {
+            width: 634px;
         }
     }
 
-    .header__navigation{
-        width:100%;
-        display:flex;
+    .header__navigation {
+        width: 100%;
+        display: flex;
         justify-content: center;
-        .header__links{
-           
+
+        .header__links {
+
             align-self: center;
-            display:flex;
+            display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-left:-52px;
-            .button{
+            margin-left: -52px;
+
+            .button {
                 margin-right: 12px;
             }
 
-        }        
+        }
     }
 }
 
-.statistics{
+.statistics {
 
-   
-    @media screen and(max-width:1670px){
-        .statistics__recomendations{
+
+    @media screen and(max-width:1670px) {
+        .statistics__recomendations {
             flex-direction: row;
         }
     }
 
     @media screen and(max-width:1200px) {
-        .statistics__elements{
+        .statistics__elements {
             flex-direction: row;
         }
     }
 
 }
 
-.additional-data{
-    margin:68px 0;
-    display:flex;
+.additional-data {
+    margin: 68px 0;
+    display: flex;
     align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
 
-    &__block{
-        display:flex;
+    &__block {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width:548px;
+        width: 548px;
         min-height: 492px;
-        margin:6px;
-        
-        .additional-data__header{
-        display:flex;
-        justify-content: space-between;
-        margin:24px;
-        width:412px;
-            &-nav{
-                display:flex;
-                justify-content: space-between;
-                width:126px;
+        margin: 6px;
 
-               .icon{
-                    transition:0.2s;
-                    width:40px;
-                    position: relative;
-                    &::after{
-                        transition:0.2s;
-                        display:block;
-                        content: " ";
-                        background: $dark_gray;
-                        width: 16px;
-                        height:6px;
-                        margin: 0 auto;
-                    }
-
-                    &[selected]{
-                        svg > *{
-                            fill:$dark_color;
-                        }
-                        &::after{
-                            background: $main_color;
-                            width: 100%;
-                        }
-                    }
-                }
-
-                .icon:hover{
-                    svg > *{
-                        fill:$dark_color;
-                    }
-                    &::after{
-                        background: $dark_color;
-                        width: 100%;
-                    }
-                }
-                
-
-            }
-        }
-    }
-    &__table{
-        margin:12px 24px 24px 24px;
-        width:412px;
-        height:100%;
     }
 
-    .button{
-        margin-bottom:24px;
+    &__table {
+        margin: 12px 24px 24px 24px;
+        width: 412px;
+        height: 100%;
     }
 
-    .additional-data__diogram-wraper{
-        width:412px;
-        display:flex;
-        flex-direction: row;
-        
-        .additional-data__diogram{
-            display:flex;
-            flex-direction: row;
-            justify-content: space-around;
-            width:252px;
-
-            &-element{
-                display:flex;
-                flex-direction: column;
-                align-items: center;
-
-                span{
-                    font-weight: bold;
-                    font-size: 1.25em;
-                }
-            }
-
-            &-text{
-                color:red;
-            }
-        }
+    .button {
+        margin-bottom: 24px;
     }
 
-    &__diogram-selector{
-        .select-list{
-            display:flex;
+
+
+    &__diogram-selector {
+        .select-list {
+            display: flex;
             flex-direction: column;
             align-items: center;
-            width:80px;
-            height:100%;
+            width: 80px;
+            height: 100%;
             overflow: hidden;
 
         }
@@ -168,13 +97,102 @@
 
 }
 
-.slider{
-    display:flex;
+.additional-data__diogram-wraper {
+    width: 412px;
+    display: flex;
+    flex-direction: row;
+
+    .additional-data__diogram {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 252px;
+
+        &-element {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span {
+                font-weight: bold;
+                font-size: 1.25em;
+            }
+        }
+
+        &-text {
+            color: red;
+        }
+    }
+}
+
+.slider {
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    & > *{
-        margin:12px;
+
+    &>* {
+        margin: 12px;
     }
 
 }
 
+.additional-data__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px;
+    width: 412px;
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 126px;
+
+        .icon {
+            transition: 0.2s;
+            width: 40px;
+            position: relative;
+
+            &::after {
+                transition: 0.2s;
+                display: block;
+                content: " ";
+                background: $dark_gray;
+                width: 16px;
+                height: 6px;
+                margin: 0 auto;
+            }
+
+            &[selected="true"] {
+                svg>* {
+                    fill: $dark_color;
+                }
+
+                &::after {
+                    background: $main_color;
+                    width: 100%;
+                }
+            }
+        }
+
+        .icon:hover {
+            svg>* {
+                fill: $dark_color;
+            }
+
+            &::after {
+                background: $dark_color;
+                width: 100%;
+            }
+
+            &[selected=true] {
+
+                &::after {
+                    background: $main_color;
+                    width: 100%;
+                }
+            }
+        }
+
+
+    }
+}

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,8 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { SignInFormComponent } from './sign-in-form/sign-in-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainPageComponent } from './main-page/main-page.component';
+import { StatsPageComponent } from './stats-page/stats-page.component';
+import { StatisticDataBlockComponent } from './statistic-data-block/statistic-data-block.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { MainPageComponent } from './main-page/main-page.component';
     StartPageInfoComponent,
     RegistrationFormComponent,
     SignInFormComponent,
-    MainPageComponent
+    MainPageComponent,
+    StatsPageComponent,
+    StatisticDataBlockComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })
 export class AppModule { }
