@@ -16,6 +16,7 @@
             line-height: 52px;
             border-bottom:4px solid $grey;
             display: inline-flex;
+            transition: height 600ms;
             
             
             .icon{
@@ -78,16 +79,24 @@
         }
 
         .list__sublist{
-
+            
             margin-left: 18px;
             position:absolute;
             visibility: hidden;
             opacity: 0;
+            .list__subitem{
+                transition: height 0.2s linear;
+                height:0;
+                overflow: hidden;
+            }
 
         }
 
         .list__input:checked ~ {
             .list__sublist{
+                .list__subitem{
+                    height:52px;
+                }
                 transform:translateY(0);
                 max-height: unset;
                 opacity: 1;

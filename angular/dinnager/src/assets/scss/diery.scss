@@ -1,39 +1,38 @@
 @import "colors";
 @import "statistics";
 
-@import "colors";
-@import "statistics";
-
 .header{
-    min-width:1600px;
-    height:128px;
+    // min-width: 1600px;
+    height: 128px;
 
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
 
-    .header__logo{
-        .logo{
-            width:634px;
-        }
+    .header__logo {
+
+            width: 634px;
+
     }
 
-    .header__navigation{
-        width:100%;
-        display:flex;
+    .header__navigation {
+        width: 100%;
+        display: flex;
         justify-content: center;
-        .header__links{
-           
+
+        .header__links {
+
             align-self: center;
-            display:flex;
+            display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-left:-52px;
-            .button{
+            // margin-left: -52px;
+
+            .button {
                 margin-right: 12px;
             }
 
-        }        
+        }
     }
 }
 
@@ -65,12 +64,12 @@
 }
 
 .diery-block{
-
+width:auto;
     
 
     &__search{
         width:388px;
-        margin:12px;
+        margin:0 12px 12px 12px;
         .search-block>*{
             margin:12px;
         }

@@ -1,0 +1,81 @@
+<header class="header">
+    <div class="header__logo">
+        <div class="logo">
+            <img class="logo__icon" src="../img/logo.png" alt="">
+            <h1 class="logo__header">dinnager</h1>
+        </div>
+    </div>
+    <nav class="header__navigation">
+        <div class="header__links">
+
+            <div class="button button_size_2x48px button_type_left">Главная</div>
+            <div class="button button_size_2x48px button_type_square">Статистика</div>
+            <div class="button button_size_2x48px button_type_square">Дневник</div>
+            <div class="button button_size_2x48px button_type_right">Профиль</div>
+        </div>
+    </nav>
+</header>
+
+<div class="statistics">
+
+<app-diery-search-block class="diery-block"></app-diery-search-block>
+    <div class="statistics__elements">
+        <app-statistic-diogram-block  class="statistics__bfc block"></app-statistic-diogram-block>
+        <app-statistics-micro-block class="block" ></app-statistics-micro-block>
+    </div>
+    <div class="statistics__graph block">
+        <div class="slider week-select">
+
+            <div class="slider__prev"><img src="../img/left.png" alt=""></div>
+            <h2 class="slider__text">Номер недели</h2>
+            <div class="slider__next"><img src="../img/right.png" alt=""></div>
+
+        </div>
+        <svg width="548px" height="330px">
+            <path id="p1" d="
+                    M 0 100 H 51 L 96 200 
+                    H 125 L 180 300
+                    H 205 L 265 150
+                    H 290 L 345 250
+                    H 370 L 425 310
+                    H 450 L 500 190
+                    H 548 
+                      " fill="none" stroke="#808080" stroke-linejoin="round" stroke-width="8px" />
+        </svg>
+        <div class="statistics__graph-dates">
+            <div class="date date_size_small">
+                <span class="date__month-date">20</span>
+                <span class="date__day-of-week">Monday</span>
+            </div>
+            <div class="date date_size_small">
+                <span class="date__month-date">20</span>
+                <span class="date__day-of-week">Monday</span>
+            </div>
+            <div class="date date_size_small">
+                <span class="date__month-date">20</span>
+                <span class="date__day-of-week">Monday</span>
+            </div>
+            <div class="date date_size_small">
+                <span class="date__month-date">20</span>
+                <span class="date__day-of-week">Monday</span>
+            </div>
+            <div class="date date_size_small">
+                <span class="date__month-date">20</span>
+                <span class="date__day-of-week">Monday</span>
+            </div>
+            <div class="date date_size_small">
+                <span class="date__month-date">20</span>
+                <span class="date__day-of-week">Monday</span>
+            </div>
+            <div class="date date_size_small">
+                <span class="date__month-date">20</span>
+                <span class="date__day-of-week">Monday</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="statistics__recomendations">
+        <div class="block">ttt</div>
+    </div>
+
+</div>

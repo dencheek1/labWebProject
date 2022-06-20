@@ -15,6 +15,8 @@ import { StatisticDataBlockComponent } from './statistic-data-block/statistic-da
 import { StatisticDiogramBlockComponent } from './statistic-diogram-block/statistic-diogram-block.component';
 import { HistoryService } from 'src/services/HistoryService';
 import { StatisticsMicroBlockComponent } from './statistics-micro-block/statistics-micro-block.component';
+import { DieryPageComponent } from './diery-page/diery-page.component';
+import { DierySearchBlockComponent } from './diery-search-block/diery-search-block.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { StatisticsMicroBlockComponent } from './statistics-micro-block/statisti
     StatsPageComponent,
     StatisticDataBlockComponent,
     StatisticDiogramBlockComponent,
-    StatisticsMicroBlockComponent
+    StatisticsMicroBlockComponent,
+    DieryPageComponent,
+    DierySearchBlockComponent
   ],
   imports: [
     BrowserModule,
