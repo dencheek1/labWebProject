@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { HistoryService } from 'src/services/HistoryService';
 import { HistoryData } from '../../model/historyData';
 
 @Component({
@@ -9,23 +10,17 @@ import { HistoryData } from '../../model/historyData';
 export class StatisticDataBlockComponent implements OnInit {
 
   isTable: boolean = true;
-  normalColor:string = "68d97b";
   @Input() title!: string;
   @Input() data!: HistoryData[];
 
   dataSum: HistoryData = { name: "Всего", carb: 0, fat: 0, kkal: 0, prot: 0,water:0, };
   maxKkal:number = 0;
 
-  constructor() { }
+  constructor(private historyService:HistoryService) { }
   ngOnInit(): void {
     if (this.data != undefined) {
-      this.dataSum = {
-        name: "Всего", fat: this.data.reduce((sum, dt) => sum += dt.fat, 0),
-        carb: this.data.reduce((sum, dt) => sum += dt.carb, 0),
-        prot: this.data.reduce((sum, dt) => sum += dt.prot, 0),
-        kkal: this.data.reduce((sum, dt) => sum += dt.kkal, 0),
-        water:0,
-      };
+      this.dataSum = this.historyService.getSum(this.data);
+      this.dataSum.name = "Всего";
 
       let items = this.data.map(d=>d.kkal).filter(val=> !isNaN(val));
       this.maxKkal = Math.max(...items);

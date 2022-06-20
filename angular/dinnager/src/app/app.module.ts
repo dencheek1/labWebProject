@@ -13,6 +13,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { StatsPageComponent } from './stats-page/stats-page.component';
 import { StatisticDataBlockComponent } from './statistic-data-block/statistic-data-block.component';
 import { StatisticDiogramBlockComponent } from './statistic-diogram-block/statistic-diogram-block.component';
+import { HistoryService } from 'src/services/HistoryService';
+import { StatisticsMicroBlockComponent } from './statistics-micro-block/statistics-micro-block.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { StatisticDiogramBlockComponent } from './statistic-diogram-block/statis
     MainPageComponent,
     StatsPageComponent,
     StatisticDataBlockComponent,
-    StatisticDiogramBlockComponent
+    StatisticDiogramBlockComponent,
+    StatisticsMicroBlockComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { StatisticDiogramBlockComponent } from './statistic-diogram-block/statis
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [HistoryService],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })

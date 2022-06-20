@@ -42,12 +42,14 @@
     @media screen and(max-width:1670px) {
         .statistics__recomendations {
             flex-direction: row;
+            justify-content: center;
         }
     }
 
     @media screen and(max-width:1200px) {
         .statistics__elements {
             flex-direction: row;
+            justify-content: center;
         }
     }
 

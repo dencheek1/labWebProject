@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { HistoryDataDay } from 'src/model/HistoryDataDay';
+import { HistoryService } from 'src/services/HistoryService';
 import { HistoryData } from '../../model/historyData';
 @Component({
   selector: 'app-stats-page',
@@ -12,21 +14,17 @@ export class StatsPageComponent implements OnInit {
   @Input() date: Date = new Date();
 
   title: string[] = ["Завтрак", "Обед", "Ужин",];
-  data1: HistoryData[] = [{ name: "Завтрак", carb: 15, fat: 25, kkal: 600, prot: 13, water: 0, },
-  { name: "Дожор", carb: 44, fat: 44, kkal: 25, prot: 12, water: 0, },
-  { name: "Пережор", carb: 55, fat: 33, kkal: 200, prot: 5, water: 0, },];
+  data1!: HistoryData[];
+  data2!: HistoryData[];
+  data3!: HistoryData[];
 
-  data2: HistoryData[] = [{ name: "Обеж", carb: 15, fat: 25, kkal: 0, prot: 13, water: 0, },
-  { name: "Дожор", carb: 44, fat: 44, kkal: 25, prot: 12, water: 0, },
-  { name: "Пережор", carb: 55, fat: 33, kkal: 200, prot: 5, water: 0, },];
+  avgData!:HistoryData;
 
-  data3: HistoryData[] = [{ name: "Ужин", carb: 15, fat: 25, kkal: 0, prot: 13, water: 0, },
-  { name: "Дожор", carb: 44, fat: 44, kkal: 25, prot: 12, water: 0, },
-  { name: "Пережор", carb: 55, fat: 33, kkal: 0, prot: 5, water: 0, },];
+  data!:HistoryDataDay;
 
+  dataWeekAvg!:HistoryData;
 
-
-  constructor() { }
+  constructor( private historyService:HistoryService) { }
 
   getStringDay(date: Date) {
     switch (date.getDay()) {
@@ -42,14 +40,17 @@ export class StatsPageComponent implements OnInit {
   }
 
   weekNumber(date: Date) {
-    var date1 = new Date(date);
-    var oneJan = new Date(date1.getFullYear(), 0, 1);
-    var numberOfDays = Math.floor((date1.getTime() - oneJan.getTime()) / (24 * 60 * 60 * 1000));
-    var result = Math.ceil(( numberOfDays) / 7);
-    return result;
+
+    return this.historyService.weekNumber(date);
   }
 
   ngOnInit(): void {
+
+    this.updateData(new Date())
+
+    this.dataWeekAvg = this.historyService.getAvgForWeek();
+    console.log(this.historyService.getSum(this.data1));
+    this.historyService.getSumForDay(new Date());
     console.log(this.date);
     console.log(this.date.getTime());
     this.feelWeek();
@@ -72,6 +73,19 @@ export class StatsPageComponent implements OnInit {
       this.week.push(new Date(mil));
     }
 
+  }
+
+updateData(date: Date){
+  console.log(`update ${date}`)
+  this.data = this.historyService.getHistoryForDay(date);
+  this.data1 = this.data.data.slice(0,3);
+  this.data2 = this.data.data.slice(3,6);
+  this.data3 = this.data.data.slice(6,9);
+  this.avgData = this.historyService.getSumForDay(date);
+}
+
+  selectDay(date:Date){
+    this.updateData(date); 
   }
 
 }

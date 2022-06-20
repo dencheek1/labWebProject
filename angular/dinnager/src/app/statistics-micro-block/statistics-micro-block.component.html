@@ -1,0 +1,45 @@
+<div class="statistics__micro">
+    <h2>Макроэлементы</h2>
+    <div class="statistics__micro-diogram">
+        <div class="statistics__micro-diogram-element">
+            <span class="statistics__micro-diogram-text">калории <br> <span
+                    class="statistics__micro-diogram-data">{{data.kkal}}</span> </span>
+            <div class="progressbar">
+                <div class="progressbar__fill" [attr.style]="'width:'+ kkalWidth + '%'">
+                </div>
+            </div>
+        </div>
+        <div class="statistics__micro-diogram-element">
+            <span class="statistics__micro-diogram-text">вода<br> <span
+                    class="statistics__micro-diogram-data">{{data.water}}</span></span>
+            <div class="progressbar">
+                <div class="progressbar__fill" [attr.style]="'width:'+ waterWidth + '%'">
+                </div>
+            </div>
+        </div>
+        <div class="statistics__micro-diogram-element">
+            <span class="statistics__micro-diogram-text">белки <br><span
+                    class="statistics__micro-diogram-data">{{data.prot}}</span> </span>
+            <div class="progressbar">
+                <div class="progressbar__fill" [attr.style]="'width:'+ protWidth + '%'">
+                </div>
+            </div>
+        </div>
+        <div class="statistics__micro-diogram-element">
+            <span class="statistics__micro-diogram-text">жиры <br><span
+                    class="statistics__micro-diogram-data">{{data.fat}}</span> </span>
+            <div class="progressbar">
+                <div class="progressbar__fill" [attr.style]="'width:'+ fatWidth + '%'">
+                </div>
+            </div>
+        </div>
+        <div class="statistics__micro-diogram-element">
+            <span class="statistics__micro-diogram-text">углеводы <br><span
+                    class="statistics__micro-diogram-data">{{data.carb}}</span> </span>
+            <div class="progressbar">
+                <div class="progressbar__fill" [attr.style]="'width:'+ carbWidth + '%'">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

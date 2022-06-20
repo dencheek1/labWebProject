@@ -30,59 +30,15 @@
                 fill="none" stroke="#808080" stroke-linejoin="round" stroke-width="8px" />
         </svg>
         <div class="statistics__graph-dates">
-            <div *ngFor="let day of week" class="date date_size_small">
+            <div (click)="selectDay(day)" *ngFor="let day of week" class="date date_size_small">
                 <span class="date__month-date">{{day.getDate()}}</span>
                 <span class="date__day-of-week">{{getStringDay(day)}}</span>
             </div>
         </div>
     </div>
     <div class="statistics__elements">
-        <app-statistic-diogram-block [data]="data1[0]" class="statistics__bfc block"></app-statistic-diogram-block>
-        <div class="statistics__micro block">
-            <h2>Макроэлементы</h2>
-            <div class="statistics__micro-diogram">
-                <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text">калории <br> <span
-                            class="statistics__micro-diogram-data">200</span> </span>
-                    <div class="progressbar">
-                        <div class="progressbar__fill">
-                        </div>
-                    </div>
-                </div>
-                <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text">вода<br> <span
-                            class="statistics__micro-diogram-data">200</span></span>
-                    <div class="progressbar">
-                        <div class="progressbar__fill">
-                        </div>
-                    </div>
-                </div>
-                <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text">белки <br><span
-                            class="statistics__micro-diogram-data">200</span> </span>
-                    <div class="progressbar">
-                        <div class="progressbar__fill">
-                        </div>
-                    </div>
-                </div>
-                <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text">жиры <br><span
-                            class="statistics__micro-diogram-data">200</span> </span>
-                    <div class="progressbar">
-                        <div class="progressbar__fill">
-                        </div>
-                    </div>
-                </div>
-                <div class="statistics__micro-diogram-element">
-                    <span class="statistics__micro-diogram-text">углеводы <br><span
-                            class="statistics__micro-diogram-data">200</span> </span>
-                    <div class="progressbar">
-                        <div class="progressbar__fill">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <app-statistic-diogram-block [data]="avgData" class="statistics__bfc block"></app-statistic-diogram-block>
+        <app-statistics-micro-block class="block" ></app-statistics-micro-block>
     </div>
     <div class="statistics__recomendations">
         <div class="statistics__recomendation block">

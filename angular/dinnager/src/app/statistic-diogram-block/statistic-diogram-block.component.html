@@ -11,34 +11,28 @@
                     <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f14150" stroke-width="10"
                         stroke-dasharray="440" stroke-dashoffset="0" />
                     <circle cx="50%" cy="50%" r="70" fill="none" stroke="#f5f557" stroke-width="14"
-                        stroke-dasharray="440" [attr.stroke-dashoffset]="440-440*(1-(data.prot)/weightSum)" />
+                        stroke-dasharray="440" [attr.stroke-dashoffset]="440-440*(1-(data.carb)/weightSum)" />
                     <circle cx="50%" cy="50%" r="70" fill="none" stroke="#68d97b" stroke-width="18"
-                        stroke-dasharray="440" [attr.stroke-dashoffset]="440-440*(1-(data.carb+data.prot)/weightSum)" />
+                        stroke-dasharray="440" [attr.stroke-dashoffset]="440-440*(1-(data.carb+data.fat)/weightSum)" />
                 </g>
             </svg>
         </div>
         <div class="statistics__bfc-text">
             <table class="statistics__bfc-data-table">
                 <tr class="statistics__bfc-data-row">
-                    <td class="statistics__bfc-data-cell">A</td>
                     <th class="statistics__bfc-data-cell">Белки</th>
-                    <td class="statistics__bfc-data-cell">B</td>
-                    <td class="statistics__bfc-data-cell">X</td>
+                    <td class="statistics__bfc-data-cell" style="color:#68d97b">{{data.prot}}</td>
                 </tr>
                 <tr class="statistics__bfc-data-row">
-                    <td class="statistics__bfc-data-cell ">A</td>
                     <th class="statistics__bfc-data-cell">Жиры</th>
-                    <td class="statistics__bfc-data-cell">B</td>
-                    <td class="statistics__bfc-data-cell">Y</td>
+                    <td class="statistics__bfc-data-cell" style="color:#f5f557;">{{data.fat}}</td>
                 </tr>
                 <tr class="statistics__bfc-data-row">
-                    <td class="statistics__bfc-data-cell ">A</td>
                     <th class="statistics__bfc-data-cell">Углеводы</th>
-                    <td class="statistics__bfc-data-cell">B</td>
-                    <td class="statistics__bfc-data-cell">Y</td>
+                    <td class="statistics__bfc-data-cell" style="color:#f14150;">{{data.carb}}</td>
                 </tr>
             </table>
-            <h3>БЖУ 15:11:1</h3>
+            <h3>БЖУ {{protPart.toFixed(1)}} : {{fatPart.toFixed(1)}} : {{carbPart.toFixed(1)}}</h3>
         </div>
     </div>
 </div>
