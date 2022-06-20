@@ -21,6 +21,6 @@ export class SignInFormComponent implements OnInit {
   }
 
   submit():void{
-    this.router.navigate(['/main'])
+    this.router.navigate(['/stats'])
   }
 }

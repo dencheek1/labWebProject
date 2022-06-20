@@ -112,7 +112,7 @@ export class HistoryService {
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "пережор", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
@@ -123,7 +123,7 @@ export class HistoryService {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "Обед", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
@@ -134,10 +134,10 @@ export class HistoryService {
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "дожор", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
             { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "дожор", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
@@ -171,48 +171,48 @@ export class HistoryService {
             date: new Date("2022-06-13")
         },
         {
-            data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 285, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 285, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
             date: new Date("2022-06-14")
         },
         {
-            data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            data: [{ name: "Завтрак", carb: 0, fat: 285, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "дожор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
             { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "Ужин", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
             date: new Date("2022-06-15")
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "пережор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "Обед", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
+            { name: "пережор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
+            { name: "дожор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },],
             date: new Date("2022-06-16")
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "дожор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
             { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "дожор", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
@@ -220,23 +220,23 @@ export class HistoryService {
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "пережор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
+            { name: "дожор", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
             { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "дожор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
+            { name: "дожор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },],
             date: new Date("2022-06-18")
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "пережор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "пережор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
+            { name: "дожор", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
@@ -246,16 +246,16 @@ export class HistoryService {
     },
     {
         data: [{
-            data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            data: [{ name: "Завтрак", carb: 285, fat: 0, kkal: 285, prot: 0, water: 0, },
+            { name: "пережор", carb: 876, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "Обед", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "Обед", carb: 983, fat: 0, kkal: 983, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
-            { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "дожор", carb: 0, fat: 0, kkal: 285, prot: 0, water: 0, },
+            { name: "Ужин", carb: 136, fat: 0, kkal: 0, prot: 0, water: 0, },
+            { name: "пережор", carb: 0, fat: 0, kkal: 136, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
-            date: new Date("2022-06-13")
+            date: new Date("2022-06-20")
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
@@ -267,7 +267,7 @@ export class HistoryService {
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
-            date: new Date("2022-06-14")
+            date: new Date("2022-06-21")
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
@@ -279,7 +279,7 @@ export class HistoryService {
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
-            date: new Date("2022-06-15")
+            date: new Date("2022-06-22")
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
@@ -291,7 +291,7 @@ export class HistoryService {
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
-            date: new Date("2022-06-16")
+            date: new Date("2022-06-23")
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
@@ -303,7 +303,7 @@ export class HistoryService {
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
-            date: new Date("2022-06-17")
+            date: new Date("2022-06-24")
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
@@ -315,7 +315,7 @@ export class HistoryService {
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
-            date: new Date("2022-06-18")
+            date: new Date("2022-06-25")
         },
         {
             data: [{ name: "Завтрак", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
@@ -327,7 +327,7 @@ export class HistoryService {
             { name: "Ужин", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "пережор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },
             { name: "дожор", carb: 0, fat: 0, kkal: 0, prot: 0, water: 0, },],
-            date: new Date("2022-06-19")
+            date: new Date("2022-06-26")
         },
         ], week: this.weekNumber(new Date("2022-06-26")),
     },];

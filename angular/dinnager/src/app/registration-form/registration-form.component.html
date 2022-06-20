@@ -5,11 +5,11 @@
         <label class="text-field__label" for="email">email</label>
       </div>
       <div class="text-field">
-        <input formControlName="password" class="text-field__input" type="password" name="password" id="password">
+        <input formControlName="password" value="password" class="text-field__input" type="password" name="password" id="password">
         <label class="text-field__label" for="password">password</label>
       </div>
       <div class="text-field">
-        <input formControlName="password" class="text-field__input" type="password" name="password" id="password">
+        <input formControlName="passwordRepeat" value="passwordRepeat" class="text-field__input" type="password" name="password" id="password">
         <label class="text-field__label" for="password">password</label>
       </div>
       <button (click)="submit()" [disabled]="registration.invalid" class="button button_size_3x48px button_type_round">регистрация</button>

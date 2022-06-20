@@ -9,15 +9,12 @@ import { HistoryData } from '../../model/historyData';
 })
 export class StatisticDataBlockComponent implements OnInit {
 
+  private _data!: HistoryData[];
+
   isTable: boolean = true;
   @Input() title!: string;
-  @Input() data!: HistoryData[];
-
-  dataSum: HistoryData = { name: "Всего", carb: 0, fat: 0, kkal: 0, prot: 0,water:0, };
-  maxKkal:number = 0;
-
-  constructor(private historyService:HistoryService) { }
-  ngOnInit(): void {
+  @Input() set data(data: HistoryData[]){
+    this._data = data;
     if (this.data != undefined) {
       this.dataSum = this.historyService.getSum(this.data);
       this.dataSum.name = "Всего";
@@ -25,6 +22,18 @@ export class StatisticDataBlockComponent implements OnInit {
       let items = this.data.map(d=>d.kkal).filter(val=> !isNaN(val));
       this.maxKkal = Math.max(...items);
     }
+  }
+
+  get data(){
+    return this._data;
+  }
+
+  dataSum: HistoryData = { name: "Всего", carb: 0, fat: 0, kkal: 0, prot: 0,water:0, };
+  maxKkal:number = 0;
+
+  constructor(private historyService:HistoryService) { }
+  ngOnInit(): void {
+
   }
 
   selectTable(): void {
