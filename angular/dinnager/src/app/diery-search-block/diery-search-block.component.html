@@ -3,320 +3,77 @@
     <ul class="select-list">
       <li class="select-list__item">
         <input type="radio" name="select-item" id="select-item-favorites">
-        <label class="select-list__label" for="select-item-favorites">избранное</label>
+        <label (click)="selectList('favorit')" class="select-list__label" for="select-item-favorites">избранное</label>
       </li>
       <li class="select-list__item">
-        <input type="radio" checked name="select-item" id="select-item-search">
-        <label class="select-list__label" for="select-item-search">поиск</label>
+        <input type="radio" checked name="select-item" id="select-item-search" >
+        <label (click)="selectList('search')" class="select-list__label" for="select-item-search">поиск</label>
       </li>
     </ul>
 
     <div class="search-block__controls">
       <div class="text-field">
-        <input class="text-field__input" type="text" name="text" id="text">
+        <input class="text-field__input" type="text" [(ngModel)] = searchString name="text" id="text">
         <label class="text-field__label" for="text">field name</label>
       </div>
     </div>
     <div class="search-block__search-result">
-      <ul class="list">
-        <li class="list__item">
-          <input class="list__input" type="checkbox" name="category" id="category-1">
-          <label class="list__input-label" for="category-1">
-            <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
-                stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
-              <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080" stroke-linejoin="round"
-                stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
-            </svg>
-            <h4>Category</h4>
-          </label>
-          <ul class="list__sublist">
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
+      <ul *ngIf="selectedType=='search'" class="list">
+        <li *ngFor="let foodCat of foodCategory"  class="list__item">
+          <div *ngIf="foodCat.items.length > 0">
+            <input class="list__input" type="checkbox" name="category" [attr.id]="'category-'+foodCat.name">
+            <label class="list__input-label" [attr.for]="'category-'+foodCat.name">
+              <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
+                  stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
+                <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080"
+                  stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
+              </svg>
+              <h4>{{foodCat.name}}</h4>
+            </label>
+            <ul class="list__sublist">
+              <li *ngFor="let foodItem of foodCat.items" class="list__subitem">
+                <div class="food-item">
+                  <div class="food-item__icon food-item__icon_type_none"></div>
+                  <div class="food-item__text">
+                    <div class="food-item__title">
+                      <h4>{{foodItem.name}}</h4>
+                    </div>
+                    <div class="food-item__descriprion">вес:{{foodItem.weight}}, ккал:{{foodItem.normalKkal}}</div>
                   </div>
-                  <div class="food-item__descriprion">много, очень</div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </li>
-        <li class="list__item">
-          <input class="list__input" type="checkbox" name="category" id="category-2">
-          <label class="list__input-label" for="category-2">
-            <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
-                stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
-              <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080" stroke-linejoin="round"
-                stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
-            </svg>
-            <h4>Category</h4>
-          </label>
-          <ul class="list__sublist">
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
+      </ul>
+      <ul *ngIf="selectedType=='favorit'"class="list">
+        <li *ngFor="let foodCat of favoriteFoodCategory"  class="list__item">
+          <div *ngIf="foodCat.items.length > 0">
+            <input class="list__input" type="checkbox" name="category" [attr.id]="'category-'+foodCat.name">
+            <label class="list__input-label" [attr.for]="'category-'+foodCat.name">
+              <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
+                  stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
+                <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080"
+                  stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
+              </svg>
+              <h4>{{foodCat.name}}</h4>
+            </label>
+            <ul class="list__sublist">
+              <li *ngFor="let foodItem of foodCat.items" class="list__subitem">
+                <div class="food-item">
+                  <div class="food-item__icon food-item__icon_type_none"></div>
+                  <div class="food-item__text">
+                    <div class="food-item__title">
+                      <h4>{{foodItem.name}}</h4>
+                    </div>
+                    <div class="food-item__descriprion">вес:{{foodItem.weight}}, ккал:{{foodItem.normalKkal}}</div>
                   </div>
-                  <div class="food-item__descriprion">много, очень</div>
                 </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="list__item">
-          <input class="list__input" type="checkbox" name="category" id="category-3">
-          <label class="list__input-label" for="category-3">
-            <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
-                stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
-              <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080" stroke-linejoin="round"
-                stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
-            </svg>
-            <h4>Category</h4>
-          </label>
-
-          <ul class="list__sublist">
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="list__item">
-          <input class="list__input" type="checkbox" name="category" id="category-4">
-          <label class="list__input-label" for="category-4">
-            <svg class="icon" width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <path class="icon__bottom" d="M 2 10 L 16 24 L 30 10  " fill="none" stroke="#808080"
-                stroke-linejoin="round" stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="0" />
-              <path class="icon__top" d="M 2 24 L 16 10 L 30 24  " fill="none" stroke="#808080" stroke-linejoin="round"
-                stroke-width="6px" stroke-dasharray="42" stroke-dashoffset="42" />
-            </svg>
-            <h4>Category</h4>
-          </label>
-          <ul class="list__sublist">
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-            <li class="list__subitem">
-              <div class="food-item">
-                <div class="food-item__icon food-item__icon_type_none"></div>
-                <div class="food-item__text">
-                  <div class="food-item__title">
-                    <h4>Кура гриля</h4>
-                  </div>
-                  <div class="food-item__descriprion">много, очень</div>
-                </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>

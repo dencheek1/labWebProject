@@ -1,2 +1,9 @@
 @import "../../assets/scss/diery.scss";
 @import "../../assets/scss/style.scss";
+
+.diery-wrapper{
+    width:100%;
+    margin: 24px;
+    display: flex;
+    justify-content: center;
+}

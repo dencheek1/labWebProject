@@ -17,6 +17,9 @@ import { HistoryService } from 'src/services/HistoryService';
 import { StatisticsMicroBlockComponent } from './statistics-micro-block/statistics-micro-block.component';
 import { DieryPageComponent } from './diery-page/diery-page.component';
 import { DierySearchBlockComponent } from './diery-search-block/diery-search-block.component';
+import { DieryTableBlockComponent } from './diery-table-block/diery-table-block.component';
+import { DierySelectFoodBlockComponent } from './diery-select-food-block/diery-select-food-block.component';
+import { FoodItemService } from 'src/services/FoodItemService';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { DierySearchBlockComponent } from './diery-search-block/diery-search-blo
     StatisticDiogramBlockComponent,
     StatisticsMicroBlockComponent,
     DieryPageComponent,
-    DierySearchBlockComponent
+    DierySearchBlockComponent,
+    DieryTableBlockComponent,
+    DierySelectFoodBlockComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,7 @@ import { DierySearchBlockComponent } from './diery-search-block/diery-search-blo
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [HistoryService],
+  providers: [HistoryService,FoodItemService],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })
